@@ -1,0 +1,53 @@
+\addcontentsline{toc}{section}{\textbf{CAPÍTULO I }}
+\addcontentsline{toc}{section}{\textbf{PLANTEAMIENTO DEL PROBLEMA}}
+\subsection{Descripción del problema}
+En el entorno académico universitario contemporáneo, los estudiantes enfrentan un volumen exponencial de información técnica y científica que a menudo desencadena una severa sobrecarga cognitiva. El procesamiento simultáneo de múltiples fuentes de información no estructurada y la dificultad de organizar apuntes fragmentados limitan la capacidad de comprensión y retención de los alumnos. Teorías del aprendizaje, como la Teoría de la Carga Cognitiva, explican que la división de la atención durante la captura manual o digital de apuntes puede resultar en la pérdida de información crítica y en un bajo rendimiento académico si los métodos de captura no se alinean con un procesamiento estructurado. A pesar de que la toma de apuntes es una herramienta pedagógica esencial, los enfoques tradicionales a menudo generan ecosistemas de estudio aislados que no logran seguir el ritmo de la complejidad del contenido universitario.
+
+Para mitigar esta sobrecarga, los estudiantes han recurrido a Modelos de Lenguaje Grande (LLMs) genéricos en busca de resúmenes y asistencia académica. Sin embargo, la adopción de estos sistemas presenta fallas críticas. Los LLMs tradicionales frecuentemente fracasan al capturar los matices técnicos y factuales propios de los artículos de investigación e ingeniería. Más grave aún es el problema de las ``alucinaciones''; los LLMs carecen de una capacidad intrínseca para verificar la veracidad de la información que generan, lo que resulta en la invención de hechos plausibles pero falsos que contaminan el aprendizaje. Además, el uso de resúmenes genéricos omite la intención y el contexto específico del usuario, lo que subraya la necesidad imperativa de sistemas de IA condicionados factualmente.
+
+Por otra parte, la digitalización de apuntes manuscritos en carreras de ingeniería y ciencias exactas enfrenta un cuello de botella computacional significativo debido a la presencia de fórmulas matemáticas, matrices y gráficos. Los sistemas convencionales de Reconocimiento Óptico de Caracteres (OCR) no están diseñados para interpretar la estructura espacial y semántica de las matemáticas. Es necesario el uso de arquitecturas basadas en Transformers, como TrOCR, sometidas a procesos de fine-tuning específicos, para lograr una conversión estructurada y precisa de notación científica hacia el formato LaTeX. La alta variabilidad en los estilos de escritura y el ruido en las imágenes complican severamente la transcripción automatizada si no se emplean pipelines de Deep Learning avanzados.
+
+Finalmente, existe una carencia fundamental de plataformas verdaderamente colaborativas. Históricamente, la gestión de apuntes ha sido un proceso de consumo individual. El aprendizaje colaborativo basado en la gestión del conocimiento es indispensable para el desarrollo de competencias en el aula. No obstante, las herramientas actuales carecen de la infraestructura necesaria para enlazar semánticamente la información entre pares. La literatura sugiere que la implementación de mapas de tópicos y grafos relacionales en los sistemas de gestión del conocimiento es un habilitador técnico crucial para una pedagogía verdaderamente colaborativa, un componente del cual carecen las plataformas educativas estándar.
+\subsection{Enunciado del problema}
+
+%====================================================
+\subsubsection{Problema general}
+%====================================================
+¿En cuánto disminuye la sobrecarga de apuntes y la fatiga mental, y en qué medida se incrementa el rendimiento académico y la eficacia colaborativa de los estudiantes universitarios de la UNAMBA al transicionar desde esquemas de estudio aislados hacia un entorno de aprendizaje interconectado y automatizado?
+
+%====================================================
+\subsubsection{Problemas específicos}
+%====================================================
+\begin{itemize}
+
+\item  
+¿En cuánto se reduce el tiempo de consolidación de apuntes manuscritos y cuál es el incremento en la tasa de preservación de información técnica mediante el uso de la aplicación con un módulo de transcripción automatizada (TrOCR) frente a los métodos de transcripción tradicional?
+
+\item \textbf{Problema Específico 2:} 
+¿Cuál es la tasa de reducción de errores conceptuales en el material de repaso de los estudiantes al condicionar las respuestas del sistema mediante un middleware RAG acoplado a un LLM en comparación con las herramientas de inteligencia artificial genéricas de entorno abierto?
+
+\item \textbf{Problema Específico 3:} 
+¿En cuánto disminuye el nivel de sobrecarga cognitiva y cuál es la variación en las calificaciones promedio de los alumnos al implementar un motor relacional de grafos de conocimiento con evaluaciones dinámicas automatizadas frente a los esquemas basales de estudio aislados?
+
+\end{itemize}
+
+
+\subsection{Justificación de la investigación}
+
+La presente investigación se justifica desde tres dimensiones fundamentales: científica, tecnológica e institucional, las cuales convergen en el desarrollo y despliegue del ecosistema SynapTome para resolver de manera integral los desafíos contemporáneos en la gestión del aprendizaje universitario.
+
+\subsubsection{Justificación Científica}
+A nivel científico, este estudio aporta evidencia empírica sobre cómo resolver las deficiencias inherentes de los Modelos de Lenguaje Grande (LLMs) en contextos académicos. Se demuestra que la integración de Grafos de Conocimiento actúa como una guía semántica que mitiga la incapacidad de los LLMs para verificar hechos, reduciendo drásticamente las "alucinaciones" durante la sumarización abstractiva \parencite{Chen2023}. Además, la investigación fundamenta un cambio desde un paradigma de aprendizaje pasivo hacia uno constructivista; el uso guiado de la IA para la generación automática de evaluaciones formativas (\textit{quizzes}) e interacciones basadas en apuntes reduce la sobrecarga cognitiva e incrementa significativamente la retención a largo plazo y la comprensión de los estudiantes \parencite{Kreijkes2026, Afian2025}. Finalmente, el proyecto valida la teoría de la pedagogía colaborativa, comprobando que el uso de Mapas de Tópicos (\textit{Topic Maps}) permite estructurar el conocimiento fragmentado, descubriendo relaciones transversales y fomentando una auténtica "Inteligencia Colectiva" \parencite{Obionwu2022}.
+
+\subsubsection{Justificación Tecnológica}
+Desde la perspectiva tecnológica, el desarrollo de SynapTome representa un avance en la superación de los cuellos de botella clásicos de la digitalización científica. El proyecto aborda las altas tasas de error de los sistemas OCR tradicionales mediante la implementación de \textit{pipelines} de visión por computadora basados en la arquitectura \textit{Transformer} (TrOCR y Nougat), los cuales, a través de procesos de \textit{fine-tuning}, logran transcribir con alta precisión notación matemática y fórmulas complejas directamente hacia el formato estructurado \LaTeX{} \parencite{AlvarezPerez2026, KardanMoghaddam2025}. Asimismo, el diseño del sistema orquesta una Arquitectura Limpia (\textit{Clean Architecture}) que integra \textit{Next.js} en el \textit{frontend}, un \textit{middleware} de Generación Aumentada por Recuperación (RAG) condicionado factualmente \parencite{Ning2025, Jiang2025}, y bases de datos relacionales con soporte vectorial como PostgreSQL. Esta integración \textit{full-stack}, apoyada en WebSockets (SignalR), justifica la viabilidad de desplegar un entorno de coedición seguro, escalable y en tiempo real \parencite{Shirkande2025, Upadhyay2026}.
+
+\subsubsection{Justificación Institucional}
+A nivel institucional, la implementación de este ecosistema en la Universidad Nacional Micaela Bastidas de Apurímac (UNAMBA), específicamente orientado a la Escuela Académico Profesional de Ingeniería de Sistemas, proporciona una infraestructura digital de vanguardia que impacta directamente en la calidad educativa. Los estudiantes de ingeniería requieren asimilar un volumen denso de información matemática y técnica; al proveerles una plataforma que centraliza, digitaliza y democratiza el acceso a una mayor cantidad de apuntes interconectados, la universidad facilita una mejora medible en el rendimiento académico y las calificaciones de su comunidad estudiantil \parencite{Dano2026}. En consecuencia, esta iniciativa dota a la UNAMBA de herramientas tecnológicas de primer nivel, posicionándola como una institución innovadora que adopta la Inteligencia Artificial de manera ética, estructurada y orientada al beneficio colectivo.
+
+
+\subsection{Ubicación y Contextualización}
+
+La presente investigación se contextualiza y aplicará en la Universidad Nacional Micaela Bastidas de Apurímac (UNAMBA), ubicada en la ciudad de Abancay, en la región de Apurímac, Perú. Específicamente, el caso de estudio está enfocado en atender las necesidades académicas y los retos de aprendizaje de los estudiantes de la Escuela Académico Profesional de Ingeniería de Informaticá y Sistemas.
+
+En este entorno, los estudiantes manejan un alto volumen de asignaturas fundamentadas en el cálculo, la física, el álgebra lineal y la algoritmia. Estos tópicos exigen el uso intensivo de notación matemática compleja, diagramas lógicos y esquemas arquitectónicos, los cuales suelen registrarse tradicionalmente de manera manuscrita. Las barreras en la digitalización de esta información, sumadas a la alta carga cognitiva propia de la disciplina y las limitaciones de infraestructura para la colaboración eficiente entre pares, hacen que los estudiantes de la UNAMBA sean los candidatos idóneos para validar la efectividad del ecosistema SynapTome como una herramienta integral para la gestión y democratización de su conocimiento técnico.

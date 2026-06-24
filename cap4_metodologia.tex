@@ -1,0 +1,193 @@
+% --- Capítulo IV: Metodología ---
+\addcontentsline{toc}{section}{\textbf{CAPÍTULO IV}}
+\addcontentsline{toc}{section}{\textbf{METODOLOGÍA}}
+
+\subsection{Tipo y nivel de investigación}
+
+La presente investigación se clasifica por su propósito como Tecnológica Aplicada, dado que busca resolver un problema práctico y concreto: la sobrecarga cognitiva y la desorganización de apuntes en el entorno universitario, mediante el desarrollo de una solución de software (SynapTome). Por su alcance y profundidad, el estudio corresponde a un nivel explicativo-experimental (específicamente, un diseño cuasi-experimental). Este nivel permite no solo describir el ecosistema desarrollado, sino también determinar las relaciones de causa y efecto que la Variable Independiente (el ecosistema basado en RAG, TrOCR y Grafos de Conocimiento) ejerce sobre la Variable Dependiente (la retención de conocimientos y el nivel de colaboración). Como señalan \textcite{Kreijkes2026}, el uso de diseños experimentales en entornos educativos es fundamental para cuantificar de manera objetiva los efectos de las herramientas basadas en LLMs sobre la comprensión lectora y la memoria de los estudiantes.
+
+\subsection{Diseño de la investigación}
+
+Para abordar la complejidad del ecosistema SynapTome, el diseño metodológico se divide en dos vertientes complementarias: un diseño de ingeniería de software y un diseño de validación académica.
+
+\begin{itemize}
+  \item Diseño de Ingeniería de Software: Se empleará la metodología ágil Scrum. Según \textcite{Afian2025}, las metodologías ágiles soportan el desarrollo iterativo, la retroalimentación continua y la adaptabilidad, características esenciales para el desarrollo exitoso de plataformas de tutoría impulsadas por inteligencia artificial. El desarrollo se estructurará en sprints que abarcarán la planificación, el diseño, la implementación del backend y los pipelines de IA, y las pruebas continuas de las funciones.
+  \item Diseño de Evaluación (Validación): Se utilizará un diseño de tipo pre-test / post-test con un grupo cuasi-experimental. Se medirá el desempeño académico (retención de conocimientos) de los estudiantes antes de la adopción del ecosistema SynapTome y, tras un periodo de uso continuo de la herramienta, se aplicará un post-test para evaluar el impacto real generado por la plataforma interactiva y colaborativa.
+\end{itemize}
+
+\subsection{Pipeline del sistema}
+Para operativizar el primer objetivo específico y transformar el flujo analógico de los estudiantes en un entorno digital de alta fidelidad, se diseñó un pipeline de procesamiento asíncrono desacoplado. La justificación de esta estructura lógica radica en la necesidad de mitigar la fatiga y el error humano derivado de la transcripción manual de fórmulas matemáticas bidimensionales complejas (como integrales múltiples, matrices o sistemas diferenciales). 
+
+El pipeline actúa directamente sobre la variable dependiente (eficiencia de captura), procesando los apuntes manuscritos mediante tres etapas críticas: normalización de la imagen, inferencia autorregresiva basada en el modelo Transformer TrOCR con \textit{fine-tuning}, y un post-procesamiento de sanitización semántica que traduce los mapas de características visuales en sintaxis \LaTeX{} válida y estandarizada. Este flujo asegura que el material resultante disponible para el autoestudio del alumno esté completamente libre de distorsiones algebraicas que alteren el significado científico original del cuaderno de clase.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{pipeline.png}
+    \caption{Descripción clara del contenido de la imagen enfocada en el impacto o flujo del estudiante.}
+    \label{fig:mi_diagrama_clave}
+\end{figure}
+
+\subsection{Descripción ética de la investigación}
+
+El desarrollo y despliegue del ecosistema SynapTome se adherirá a estrictos estándares de ética y privacidad de la información \parencite{Kreijkes2026, Dano2026}. Antes de iniciar las pruebas, se obtendrá un consentimiento informado por escrito de los estudiantes de la UNAMBA, garantizando que su participación sea voluntaria y que tengan el derecho de retirarse del estudio en cualquier momento.\\
+A nivel técnico, el tratamiento de los datos personales y el contenido de los apuntes manuscritos subidos por los usuarios se gestionará con políticas de seguridad de grado industrial. Para asegurar la protección de los datos en tránsito y en reposo, la arquitectura implementará autenticación segura mediante tokens JWT (JSON Web Tokens) en los endpoints de la API, mientras que toda la información persistente, incluidas las métricas de evaluación y los grafos relacionales, será resguardada en una base de datos PostgreSQL aplicando el encriptado adecuado, evitando el acceso no autorizado y manteniendo la confidencialidad de la información académica y personal \parencite{Upadhyay2026}.
+
+\subsection{Población y muestra}
+
+\begin{itemize}
+  \item Población: La población objetivo está constituida por los estudiantes matriculados en la Escuela Académico Profesional de Ingeniería de Sistemas de la Universidad Nacional Micaela Bastidas de Apurímac (UNAMBA), durante el año académico en curso.
+  \item Se seleccionará una muestra mediante un muestreo no probabilístico por conveniencia, basado en la disponibilidad, el nivel de interacción digital de los estudiantes y su inscripción en cursos de alta densidad matemática o teórica. Este tipo de muestreo facilita el reclutamiento para pruebas tecnológicas y de usabilidad en entornos controlados de laboratorio o aulas informáticas \parencite{Kreijkes2026}.
+\end{itemize}
+\subsection{Procedimiento}
+
+El procedimiento general de la investigación comprenderá cinco fases sistemáticas, desde el levantamiento de requisitos hasta la evaluación del sistema "SynapTome" en un entorno real con estudiantes de Ingeniería de Sistemas de la UNAMBA. La Tabla \ref{tab:procedimiento} resume las actividades, las herramientas tecnológicas empleadas y los entregables de cada fase.
+\begin{table}[H]
+\centering
+\caption{Fases del procedimiento de investigación}
+\label{tab:procedimiento}
+\scriptsize % Se reduce ligeramente a scriptsize para que el contenedor TikZ con borde grueso no sufra desbordes de margen
+
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tikzpicture}
+\node[inner sep=0pt] (tabla) {
+\begin{tabular}{|p{2.6cm}|p{5.1cm}|p{3.2cm}|p{2.6cm}|}
+\hline
+\textbf{Fase} & \textbf{Actividades} & \textbf{Herramientas / Tecnologías} & \textbf{Entregable} \\
+\hline
+\thickhline
+
+1. Levantamiento de requisitos y diseño & Identificación de las necesidades de digitalización y colaboración de los estudiantes; diseño de la arquitectura del ecosistema (modelo relacional y lógica de grafos de conocimiento) \parencite{Afian2025} & Diagramas UML, modelado entidad-relación, PostgreSQL & Documento de requisitos y diagrama de arquitectura \\
+\hline
+
+2. Desarrollo (Backend y Frontend) & Construcción del núcleo del sistema bajo Clean Architecture: orquestación de la lógica de negocio e integración con APIs de IA en el backend, y desarrollo de una interfaz reactiva y colaborativa en el frontend \parencite{Martin2017, Afian2025} & C\# / ASP.NET Core, Next.js, React, PostgreSQL & Prototipo funcional (módulos CRUD y autenticación JWT) \\
+\hline
+
+3. Integración de RAG y TrOCR & Implementación del middleware RAG para acoplar la recuperación de vectores semánticos con los LLMs; fine-tuning de la arquitectura TrOCR con corpus matemático y manuscrito para adaptar el modelo al dominio \parencite{Kannammal2024, Zhang2026, AlvarezPerez2026} & Bases de datos vectoriales, TrOCR, LLM (API), Python para fine-tuning & Pipeline de IA integrado (módulo OCR + módulo RAG) \\
+\hline
+
+4. Pruebas alfa y beta & Pruebas de caja negra, pruebas unitarias automatizadas y pruebas preliminares con un grupo reducido de usuarios para depurar errores de concurrencia y validar la sincronización en tiempo real \parencite{Shirkande2025} & SignalR (WebSockets), frameworks de testing (xUnit / Jest) & Reporte de pruebas y correcciones \\
+\hline
+
+5. Evaluación en entorno real & Despliegue de SynapTome para la muestra de estudiantes de la UNAMBA; ejecución de pre-test y post-test; recolección de datos de rendimiento y métricas del sistema & Cuestionarios digitales, panel de métricas del sistema & Base de datos de resultados (pre/post-test) \\
+\hline
+\end{tabular}
+};
+
+%====================================================
+% ENCUADRE DE BORDE GRUESO UNIVERSITARIO
+%====================================================
+\draw[line width=3.5pt] (tabla.north west) rectangle (tabla.south east);
+\end{tikzpicture}
+\end{table}
+
+\subsection{Técnicas e instrumentos}
+
+Para medir de manera rigurosa la eficacia algorítmica del sistema y el nivel de aceptación por parte de los usuarios, se emplearán técnicas mixtas (cuantitativas y cualitativas), combinando la evaluación experimental del rendimiento de los modelos de IA con la percepción subjetiva de los estudiantes.
+
+\subsubsection{Técnicas}
+
+\begin{itemize}
+  \item \textbf{Análisis documental:} Revisión de antecedentes, literatura técnica y datasets de referencia (por ejemplo, SPA-Sentences) para establecer las líneas base de comparación de los modelos de OCR/HTR y sumarización \parencite{TarazonaCruz2024}.
+  \item \textbf{Experimentación:} Ejecución controlada del pipeline TrOCR y del módulo RAG sobre un conjunto de apuntes manuscritos y resúmenes generados, registrando los resultados de manera cuantitativa \parencite{AlHitawi2026}.
+  \item \textbf{Encuesta:} Aplicación de cuestionarios estructurados a los estudiantes participantes para recoger su percepción sobre la usabilidad, utilidad y satisfacción con SynapTome \parencite{Afian2025, Dano2026}.
+\end{itemize}
+
+\subsubsection{Instrumentos}
+
+La Tabla \ref{tab:instrumentos} detalla los instrumentos empleados para cada técnica, indicando la variable que mide y la escala o métrica utilizada.
+\begin{table}[H]
+\centering
+\caption{Instrumentos de recolección de datos}
+\label{tab:instrumentos}
+\scriptsize % Se escala a scriptsize para que el contorno grueso perimetral de 3.5pt encaje perfectamente sin desbordes
+
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tikzpicture}
+\node[inner sep=0pt] (tabla) {
+\begin{tabular}{|p{3.4cm}|p{4.6cm}|p{3.6cm}|p{2.6cm}|}
+\hline
+\textbf{Instrumento} & \textbf{Variable / Dimensión que mide} & \textbf{Escala / Métrica} & \textbf{Fuente} \\
+\hline
+\thickhline
+
+Ficha de registro de transcripción OCR & Eficiencia de captura técnica (preservación de información manuscrita) & Tasa de Error de Caracteres (CER \%) y \LaTeX{} válido & \parencite{AlHitawi2026} \\
+\hline
+
+Ficha de evaluación de fidelidad conceptual & Calidad factual del repaso (reducción de errores conceptuales en notas) & Índice de alucinación (\%) y coherencia de resúmenes & \parencite{Saxena2025, Ning2025} \\
+\hline
+
+Cuestionario NASA-TLX (Carga Mental) & Sobrecarga cognitiva y fatiga mental del estudiante en su autoestudio & Escala ordinal de carga de trabajo (0--100 ptos) & \parencite{Hart1988} \\
+\hline
+
+Cuestionario de usabilidad adaptado (SUS) & Eficiencia operativa en la organización colaborativa de apuntes en red & Puntuación normalizada SUS (0--100 ptos) & \parencite{Afian2025} \\
+\hline
+
+Evaluación Pre-test / Post-test de retención & Rendimiento académico e incremento de la fijación conceptual a largo plazo & Calificación cuantitativa (Escala vigesimal 0--20) & \parencite{Kreijkes2026} \\
+\hline
+\end{tabular}
+};
+
+%====================================================
+% ENCUADRE DE BORDE GRUESO UNIVERSITARIO
+%====================================================
+\draw[line width=3.5pt] (tabla.north west) rectangle (tabla.south east);
+\end{tikzpicture}
+\end{table}
+
+\subsection{Estadístico de la investigación}
+
+Para evaluar el desempeño del pipeline de visión por computadora TrOCR en la digitalización de apuntes manuscritos, se calcularán cuantitativamente la Tasa de Error de Caracteres (CER) y la Tasa de Error de Palabras (WER), garantizando así que la transcripción a \LaTeX{} sea altamente precisa \parencite{AlHitawi2026}. Ambas métricas se basan en la distancia de edición de Levenshtein y se calculan como:
+
+\begin{equation}
+\text{CER} = \frac{S + D + I}{N}
+\label{eq:cer}
+\end{equation}
+
+\begin{equation}
+\text{WER} = \frac{S_w + D_w + I_w}{N_w}
+\label{eq:wer}
+\end{equation}
+
+donde $S$, $D$ e $I$ representan el número de sustituciones, eliminaciones e inserciones de caracteres (o $S_w$, $D_w$, $I_w$ a nivel de palabras) necesarias para transformar el texto reconocido en el texto de referencia, y $N$ ($N_w$) es el número total de caracteres (palabras) en el texto de referencia. Valores cercanos a 0 indican una transcripción casi perfecta.
+
+Para evaluar la calidad, coherencia y fidelidad semántica de los resúmenes abstractivos y la mitigación de alucinaciones del motor RAG, se emplearán métricas estándar de procesamiento de lenguaje natural como ROUGE-N y BLEU, complementadas opcionalmente con BERTScore \parencite{Saxena2025, Ning2025}. La métrica ROUGE-N se define como:
+
+\begin{equation}
+\text{ROUGE-N} = \frac{\sum_{S \in \{\text{Referencias}\}} \sum_{\text{gram}_n \in S} \text{Count}_{\text{match}}(\text{gram}_n)}{\sum_{S \in \{\text{Referencias}\}} \sum_{\text{gram}_n \in S} \text{Count}(\text{gram}_n)}
+\label{eq:rouge}
+\end{equation}
+
+es decir, la proporción de $n$-gramas del resumen de referencia que también aparecen en el resumen generado por el sistema.
+
+Para la evaluación de la aceptación tecnológica (Tabla \ref{tab:instrumentos}), los puntajes obtenidos en los cuestionarios SUS se calcularán siguiendo la fórmula estándar:
+
+\begin{equation}
+\text{SUS} = 2.5 \times \sum_{i=1}^{10} x_i'
+\label{eq:sus}
+\end{equation}
+
+donde $x_i'$ corresponde a la puntuación ajustada de cada uno de los 10 ítems (restando 1 a los ítems impares y restando el valor original a 5 en los ítems pares), de modo que el puntaje final se normaliza en una escala de 0 a 100.
+
+Finalmente, dado que el diseño de evaluación implica medir el rendimiento académico de un mismo grupo de estudiantes en dos momentos distintos (pre-test y post-test), la comprobación de la hipótesis principal se realizará utilizando la prueba paramétrica T de Student para muestras relacionadas (pares), asumiendo la normalidad en la distribución de los datos de desempeño:
+
+\begin{equation}
+t = \frac{\bar{d}}{s_d / \sqrt{n}}
+\label{eq:tstudent}
+\end{equation}
+
+donde $\bar{d}$ es la media de las diferencias entre las puntuaciones del post-test y el pre-test de cada estudiante, $s_d$ es la desviación estándar de esas diferencias, y $n$ es el tamaño de la muestra. En el caso de que la distribución de las puntuaciones de retención (por ejemplo, resultados de \textit{free recall} o quizzes integrados) no se ajuste a la normalidad, se empleará la prueba no paramétrica de Wilcoxon para muestras relacionadas como alternativa equivalente \parencite{Kreijkes2026}.
+
+Adicionalmente, para cuantificar la magnitud práctica del efecto observado (más allá de su significancia estadística), se calculará el tamaño del efecto mediante la $d$ de Cohen para muestras relacionadas:
+
+\begin{equation}
+d = \frac{\bar{d}}{s_d}
+\label{eq:cohend}
+\end{equation}
+
+interpretando los valores según las convenciones habituales ($d \approx 0.2$ efecto pequeño, $d \approx 0.5$ efecto moderado, $d \geq 0.8$ efecto grande), de manera consistente con los tamaños de efecto reportados en estudios similares \parencite{Kreijkes2026}.
+
+En todos los casos se aplicará un nivel de significancia de $\alpha = 0.05$ ($p < 0.05$) para confirmar estadísticamente si las mejoras obtenidas en la retención del conocimiento mediante la plataforma SynapTome son significativas frente al modelo tradicional de toma de apuntes.

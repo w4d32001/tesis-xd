@@ -1,0 +1,546 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%%INICIO DE TIPO DE LETRA 
+\usepackage{newtxtext,newtxmath}
+%TIPO DE LETRA FIN
+\usepackage{tocloft}
+
+
+\setlength{\textwidth}{16cm}
+\usepackage{amsmath, amsfonts}
+\usepackage{graphicx}
+\usepackage{alltt}
+\usepackage{hyperref}
+%\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{gensymb}
+\usepackage[titletoc]{appendix}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{dashrule}
+\usepackage{subfig}
+\usetikzlibrary{intersections,calc}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{newclude}
+\usepackage{tabularx}
+
+\usepackage{fancyhdr}
+%\usepackage{geometry}
+\usepackage[
+  a4paper,
+  left=3.0cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+]{geometry}
+\usepackage{pdfpages}
+\usepackage{numprint}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{titlesec}
+\usepackage{chngcntr}
+\usepackage{cleveref}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ragged2e}
+%%%% titulos y subtitulos mismo tamaño %%%%
+\usepackage[modulo]{lineno}
+% ==== NUMERACIÓN DE LÍNEAS DESDE EL ÍNDICE ====
+
+% Fuente y posición de los números
+\renewcommand\linenumberfont{\normalfont\bfseries\scriptsize}
+\setlength\linenumbersep{10pt}
+
+% Mantener numeración al usar clearpage o input
+\makeatletter
+\let\old@clearpage\clearpage
+\renewcommand{\clearpage}{%
+  \ifLineNumbers
+    \old@clearpage
+    \linenumbers
+  \else
+    \old@clearpage
+  \fi
+}
+\makeatother
+
+\usepackage{xpatch}
+\usepackage{lipsum}
+%numeracion parte superior
+\usepackage{lastpage}
+\pagestyle{fancy}
+\usepackage{csquotes}
+
+\usepackage[style=iso-authoryear,backend=biber]{biblatex}
+\addbibresource{OLD_BIBLIO.bib}
+%%mayuscula los autores
+\AtBeginBibliography{%
+  \renewcommand*{\mkbibnamefamily}[1]{\MakeUppercase{#1}}%
+}
+
+% --- Color azul en TODAS las citas ---
+\usepackage{xcolor}
+
+% Paréntesis en azul
+\let\oldmkbibparens\mkbibparens
+\renewcommand*{\mkbibparens}[1]{\textcolor{blue}{\oldmkbibparens{#1}}}
+
+\usepackage{xcolor}
+\AtEveryCitekey{\color{blue}}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+\usepackage{pgfplots}
+\usepackage{bchart}
+\pgfplotsset{compat=1.18}
+
+\newcommand{\aref}[1]{\hyperref[#1]{Appendix~\ref{#1}}}
+\setlength\dashlinedash{0.5pt}
+\setlength\dashlinegap{3pt}
+
+% Estilo ISO 690 para tablas
+\DeclareCaptionLabelSeparator{iso690sep}{\space—\space}
+\captionsetup[table]{
+  labelfont=bf,
+  labelsep=iso690sep,
+  textfont=bf,
+  justification=raggedright,
+  singlelinecheck=false,
+  name=Tabla,
+  font=normalfont,
+  skip=1ex
+}
+
+% Estilo ISO 690 para figuras
+\captionsetup[figure]{
+  labelfont=bf,
+  labelsep=iso690sep,
+  textfont=bf,
+  justification=raggedright,
+  singlelinecheck=false,
+  name=Figura,
+  font=normalfont,
+  skip=1ex
+}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\addto\captionsspanish{\renewcommand{\figurename}{Figura}}
+
+%sub nivel 4
+\titleformat{\paragraph}[hang]{\normalfont\fontsize{13pt}{12pt}\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{1.5ex plus 0.5ex minus .2ex}{1em}
+\setcounter{secnumdepth}{4}
+
+% Configurar líneas gruesas
+\setlength{\arrayrulewidth}{0.75pt}
+\newcommand{\thickhline}{\Xhline{1.2pt}}
+
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{emdash}{\textemdash\ }
+\captionsetup[table]{labelformat=default, labelsep=emdash, justification=raggedright}
+\captionsetup[figure]{labelformat=default, labelsep=emdash, justification=raggedright}
+
+\makeatletter
+\def\thickhline{%
+  \noalign{\ifnum0=`}\fi
+    \hrule \@height 2pt
+  \futurelet\reserved@a\@xhline}
+\makeatother
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% ===== Listas alineadas con párrafo =====
+\setlist[itemize]{label=\textbullet}
+
+% ======= FORMATO TÍTULOS Y ALINEACIÓN =======
+
+% --- Section ---
+\newlength{\numwidthsec}
+\setlength{\numwidthsec}{3em}
+\titleformat{\section}[hang]
+  {\normalfont\fontsize{12pt}{12pt}\bfseries}
+  {\makebox[\numwidthsec][l]{\thesection}}
+  {0pt}{}
+
+% --- Subsection ---
+\newlength{\numwidthsub}
+\setlength{\numwidthsub}{3em}
+\titleformat{\subsection}[hang]
+  {\normalfont\fontsize{12pt}{12pt}\bfseries}
+  {\makebox[\numwidthsub][l]{\thesubsection}}
+  {0pt}{}
+
+% --- Subsubsection ---
+\titleformat{\subsubsection}[hang]
+  {\normalfont\fontsize{12pt}{12pt}\bfseries}
+  {\thesubsubsection}{0.0em}{}
+
+% --- Sangría general ---
+\setlength{\parindent}{0pt}
+
+% --- Reglas de sangría según nivel ---
+\pretocmd{\section}{\setlength{\leftskip}{2.5em}}{}{}
+\pretocmd{\subsection}{\setlength{\leftskip}{4.5em}}{}{}
+\pretocmd{\subsubsection}{\setlength{\leftskip}{7.5em}}{}{}
+\pretocmd{\paragraph}{\setlength{\leftskip}{11.5em}}{}{}
+
+\setlength{\numwidthsec}{3em}
+\titleformat{\section}[hang]
+  {\normalfont\fontsize{12pt}{12pt}\bfseries}
+  {\makebox[\numwidthsec][l]{\thesection}}
+  {0pt}{}
+
+\setlength{\numwidthsub}{3em}
+\titleformat{\subsection}[hang]
+  {\normalfont\fontsize{12pt}{12pt}\bfseries}
+  {\makebox[\numwidthsub][l]{\thesubsection}}
+  {0pt}{}
+
+\titleformat{\subsubsection}[block]
+  {\normalfont\fontsize{12pt}{12pt}\bfseries}
+  {\thesubsubsection}{1.0em}{}{}
+
+% --- Espaciado títulos ---
+\titlespacing*{\section}{0.0em}{1.5em}{1pt}
+\titlespacing*{\subsection}{1.5em}{1.5em}{0pt}
+\titlespacing*{\subsubsection}{4.5em}{1.5em}{0pt}
+\titlespacing*{\paragraph}{7.5em}{1.5em}{0pt}
+
+% --- Sangría general ---
+\setlength{\parindent}{1.5pt}
+
+% ===== Listas =====
+\setlist[itemize,1]{label=\textbullet, labelsep=1em}
+\setlist[enumerate,1]{label=\arabic*., labelsep=1em}
+
+\pretocmd{\section}{\setlist[itemize,1]{left=0.5em,labelsep=1em}\setlist[enumerate,1]{left=0.5em,labelsep=1em}}{}{}
+\pretocmd{\subsection}{\setlist[itemize,1]{left=4.5em,labelsep=1em}\setlist[enumerate,1]{left=4.5em,labelsep=1em}}{}{}
+\pretocmd{\subsubsection}{\setlist[itemize,1]{left=7.3em,labelsep=1em}\setlist[enumerate,1]{left=7.3em,labelsep=1em}}{}{}
+\pretocmd{\paragraph}{\setlist[itemize,1]{left=10.5em,labelsep=1em}\setlist[enumerate,1]{left=10.5em,labelsep=1em}}{}{}
+
+%%numeracion
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% --- Estilo general de páginas ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{%
+\textbf{- \thepage}\ de\ \textbf{\pageref{LastPage} -}%
+}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
+%%%AJUSTAR LOS TEXTOS
+\makeatletter
+\def\@afterheading{%
+  \@nobreaktrue
+  \everypar{%
+    \@nobreakfalse
+    \clubpenalty\@M
+    \widowpenalty\@M
+    \everypar{}%
+    \setlength{\parindent}{0em}%
+  }%
+}
+\makeatother
+
+%%INTERLINEADO
+\usepackage{etoolbox}
+\usepackage{setspace}
+\usepackage{capt-of}
+
+%%%%%%%%%%
+% --- Nuevo entorno alineado ---
+\newenvironment{alignedfigure}
+  {\par\hspace*{3em}\begin{minipage}{0.95\linewidth}}
+  {\end{minipage}\par}
+
+%%NUMERACION DE LAS LINEAS
+\renewcommand\linenumberfont{\normalfont\fontsize{12}{12}\selectfont}
+
+\makeatletter
+\newcommand{\blanklines}[1]{%
+  \par
+  \begingroup
+  \@tempcnta=0
+  \loop
+    \advance\@tempcnta by 1
+    \noindent\null\par
+    \ifnum\@tempcnta<#1
+  \repeat
+  \endgroup
+}
+\makeatother
+
+\newcommand{\parnumerado}{\noindent\null\par}
+\setlength\linenumbersep{1em}
+\modulolinenumbers[1]
+
+\setlist[itemize]{label=\textbullet}
+
+%%ALINEAR FIGURAS Y TABLAS DENTRO DE LA SECCION
+\usepackage{changepage}
+\newenvironment{levelaligned}
+{
+  \begin{adjustwidth}{\leftskip}{0pt}
+  \begin{minipage}{0.95\linewidth}
+}
+{
+  \end{minipage}
+  \end{adjustwidth}
+}
+
+% ===============================
+% FORMATO DEL ÍNDICE (TOC)
+% ===============================
+
+% --- Quitar negrita en secciones del TOC ---
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+
+% --- Sangrías: títulos sin número al margen, numerados con sangría ---
+\renewcommand{\cftsecindent}{0pt}
+\renewcommand{\cftsubsecindent}{2em}
+\renewcommand{\cftsubsubsecindent}{4em}
+
+% --- Espacio reservado para los números ---
+\setlength{\cftsecnumwidth}{2.2em}
+\setlength{\cftsubsecnumwidth}{3.2em}
+\setlength{\cftsubsubsecnumwidth}{4.2em}
+
+% --- Líneas punteadas en todos los niveles ---
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- Sin espacio extra entre entradas ---
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\setlength{\cftbeforesubsubsecskip}{0pt}
+
+% ===============================
+% Formato Índice de Tablas — espaciado simétrico alrededor del guión
+% ===============================
+\renewcommand{\cfttabpresnum}{\textbf{Tabla~}}
+\renewcommand{\cfttabaftersnum}{\textbf{~\textemdash~}}
+\newlength{\mylenT}
+\settowidth{\mylenT}{\cfttabpresnum 9\cfttabaftersnum}
+\setlength{\cfttabnumwidth}{\mylenT}
+
+% ===============================
+% Formato Índice de Figuras — espaciado simétrico alrededor del guión
+% ===============================
+\renewcommand{\cftfigpresnum}{\textbf{Figura~}}
+\renewcommand{\cftfigaftersnum}{\textbf{~\textemdash~}}
+\newlength{\mylenF}
+\settowidth{\mylenF}{\cftfigpresnum 9\cftfigaftersnum}
+\setlength{\cftfignumwidth}{\mylenF}
+
+% ===============================
+% Títulos de índices centrados
+% ===============================
+\addto\captionsspanish{%
+  \renewcommand{\listtablename}{\hfill ÍNDICE DE TABLAS\hfill}%
+  \renewcommand{\tablename}{Tabla}%
+  \renewcommand{\listfigurename}{\hfill ÍNDICE DE FIGURAS\hfill}%
+  \renewcommand{\figurename}{Figura}%
+}
+
+\newcommand{\DisableFancyAll}{%
+  \fancyhf{}%
+  \fancyhead{}%
+  \fancyfoot{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+%%ecuacion por capitulo
+\usepackage{chngcntr}
+\counterwithin{equation}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+%%%rotar la tabla
+\usepackage{rotating}
+\usepackage{pifont}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{afterpage}
+
+%%codigo python
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=3pt,
+  frame=single,
+  breaklines=true,
+  captionpos=b
+}
+\lstset{
+  extendedchars=true,
+  inputencoding=utf8,
+  literate=
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+    {ñ}{{\~n}}1 {Ñ}{{\~N}}1
+    {Δ}{{$\Delta$}}1
+    {β}{{$\beta$}}1
+    {γ}{{$\gamma$}}1
+    {ζ}{{$\zeta$}}1
+}
+
+\onehalfspacing
+
+\begin{document}
+% --- Portada ---
+\newpage
+\thispagestyle{empty}
+\linenumbers
+\noindent
+\input{caratula}
+
+\newpage
+
+% --- INDICE GENERAL ---
+\clearpage
+\pagenumbering{gobble}
+\thispagestyle{empty}
+\blanklines{4}
+
+\renewcommand{\contentsname}{%
+  \begin{center}\MakeUppercase{\fontsize{12pt}{12pt}\selectfont ÍNDICE}\end{center}%
+}
+
+\addtocontents{toc}{\protect\flushright{\fontsize{12pt}{12pt}\selectfont Pag.}\par}
+
+\tableofcontents
+\thispagestyle{empty}
+
+% --- INDICE DE TABLAS---
+\clearpage
+\DisableFancyAll
+\thispagestyle{empty}
+\blanklines{4}
+\listoftables
+
+% --- INDICE DE FIGURAS ---
+\newpage
+\clearpage
+\thispagestyle{empty}
+\blanklines{4}
+\listoffigures
+
+\clearpage
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{%
+\textbf{- \thepage}\ de\ \textbf{\pageref{LastPage} -}%
+}
+\renewcommand{\headrulewidth}{0pt}
+
+\newpage
+\clearpage
+\pagenumbering{arabic}
+\blanklines{4}
+\begin{center}
+\textbf{INTRODUCCIÓN}
+\end{center}
+\input{introduccion}
+
+%--DATOS GENERALES
+\clearpage
+\blanklines{4}
+\begin{center}
+    \textbf{DATOS GENERALES}
+\end{center}
+\input{datos_generales}
+
+% --- CAPÍTULO I ---
+\clearpage
+\blanklines{4}
+\setcounter{section}{1}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{CAPÍTULO I}\\
+\textbf{PLANTEAMIENTO DEL PROBLEMA}
+\end{center}
+\input{Cap1_planteamientoProblema}
+
+% --- CAPÍTULO II ---
+\clearpage
+\blanklines{4}
+\setcounter{section}{2}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{CAPÍTULO II} \\
+ \textbf{OBJETIVOS E HIPÓTESIS}
+\end{center}
+\input{cap2_objetivos_hipotesis}
+
+% --- CAPÍTULO III ---
+\clearpage
+\blanklines{4}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{CAPÍTULO III} \\
+ \textbf{MARCO TEÓRICO REFERENCIAL}
+\end{center}
+\input{cap3_marcoT}
+
+% --- CAPÍTULO IV ---
+\clearpage
+\blanklines{4}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{CAPÍTULO IV}\\
+\textbf{METODOLOGÍA}
+\end{center}
+\input{cap4_metodologia}
+
+\clearpage
+\blanklines{4}
+\setcounter{section}{5}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{CAPÍTULO V}\\
+\textbf{ADMINISTRACIÓN DEL PROYECTO}
+\end{center}
+\input{cap05_ad_proyecto}
+
+% --- Bibliografía ---
+\newpage
+\blanklines{4}
+\begin{center}
+\textbf{REFERENCIAS BIBLIOGRÁFICAS}
+\end{center}
+\addcontentsline{toc}{section}{REFERENCIAS BIBLIOGRÁFICAS}
+\printbibliography[heading=none]
+\clearpage
+\newpage
+
+%--ANEXOS----
+\blanklines{10}
+\begin{center}
+\addcontentsline{toc}{section}{ANEXOS}
+\noindent \hspace*{0.5cm}\Large \textbf{ANEXOS}
+\end{center}
+\newpage
+\input{ANEXOS}
+
+\end{document}
