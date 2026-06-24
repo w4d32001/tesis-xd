@@ -12,50 +12,66 @@
 \contentsline {subsubsection}{\numberline {1.3.2}Justificación Tecnológica}{5}{subsubsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.3}Justificación Institucional}{5}{subsubsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.4}Ubicación y Contextualización}{6}{subsection.1.4}%
-\contentsline {section}{\textbf {CAPÍTULO II}}{7}{subsection.1.4}%
-\contentsline {section}{\textbf {OBJETIVOS E HIPÓTESIS}}{7}{subsection.1.4}%
+\contentsline {section}{\textbf {CAPÍTULO II}}{7}{figure.caption.1}%
+\contentsline {section}{\textbf {OBJETIVOS E HIPÓTESIS}}{7}{figure.caption.1}%
 \contentsline {subsection}{\numberline {2.1}Objetivos de la investigación}{7}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Objetivo general}{7}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Objetivos específicos}{7}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Hipótesis de la investigación}{7}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Hipótesis general}{7}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Hipótesis específicas}{7}{subsubsection.2.2.2}%
-\contentsline {section}{\textbf {CAPÍTULO III}}{10}{table.caption.1}%
-\contentsline {section}{\textbf {MARCO TEÓRICO REFERENCIAL}}{10}{table.caption.1}%
+\contentsline {section}{\textbf {CAPÍTULO III}}{10}{table.caption.2}%
+\contentsline {section}{\textbf {MARCO TEÓRICO REFERENCIAL}}{10}{table.caption.2}%
 \contentsline {subsection}{\numberline {3.1}Antecedentes}{10}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Antecedentes internacionales}{10}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Antecedentes nacionales}{12}{subsubsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.2}Marco teórico}{12}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Inteligencia Artificial Generativa y Arquitectura RAG}{12}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Arquitectura Transformer y Mecanismo de Atención}{13}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Reconocimiento de Texto Manuscrito (HTR), TrOCR y Fórmulas Matemáticas}{14}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}\textit {Vector Embeddings} y Bases de Datos Vectoriales}{15}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Grafos de Conocimiento}{15}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Generación Automática de Evaluaciones Adaptativas}{16}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Aprendizaje Activo y Recuperación Espaciada (\textit {Spaced Repetition})}{16}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}Aprendizaje Colaborativo Mediado por Tecnología}{17}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}Carga Cognitiva y Medición con NASA-TLX}{17}{subsubsection.3.2.9}%
-\contentsline {subsubsection}{\numberline {3.2.10}Privacidad y Seguridad de Datos Estudiantiles en Plataformas IA}{18}{subsubsection.3.2.10}%
-\contentsline {subsubsection}{\numberline {3.2.11}Arquitectura Limpia (\textit {Clean Architecture})}{19}{subsubsection.3.2.11}%
-\contentsline {subsection}{\numberline {3.3}Marco conceptual}{19}{subsection.3.3}%
-\contentsline {section}{\textbf {CAPÍTULO IV}}{21}{Item.22}%
-\contentsline {section}{\textbf {METODOLOGÍA}}{21}{Item.22}%
-\contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{21}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{21}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Pipeline del sistema}{22}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Descripción ética de la investigación}{22}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Población y muestra}{23}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Procedimiento}{23}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Técnicas e instrumentos}{24}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Técnicas}{24}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Instrumentos}{25}{subsubsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.8}Estadístico de la investigación}{25}{subsection.4.8}%
-\contentsline {section}{\textbf {CAPÍTULO V}}{27}{equation.4.7}%
-\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{27}{equation.4.7}%
-\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{27}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Presupuesto}{30}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{30}{subsection.5.3}%
-\contentsline {section}{REFERENCIAS BIBLIOGRÁFICAS}{32}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {3.2.3}Reconocimiento de Texto Manuscrito (HTR), TrOCR y Fórmulas Matemáticas}{15}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}\textit {Vector Embeddings} y Bases de Datos Vectoriales}{16}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Grafos de Conocimiento}{17}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Generación Automática de Evaluaciones Adaptativas}{18}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Aprendizaje Activo y Recuperación Espaciada (\textit {Spaced Repetition})}{18}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Aprendizaje Colaborativo Mediado por Tecnología}{19}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Carga Cognitiva y Medición con NASA-TLX}{20}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}Privacidad y Seguridad de Datos Estudiantiles en Plataformas IA}{20}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Arquitectura Limpia (\textit {Clean Architecture})}{21}{subsubsection.3.2.11}%
+\contentsline {subsection}{\numberline {3.3}Marco conceptual}{22}{subsection.3.3}%
+\contentsline {section}{\textbf {CAPÍTULO IV}}{24}{Item.22}%
+\contentsline {section}{\textbf {METODOLOGÍA}}{24}{Item.22}%
+\contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{24}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Pipeline del sistema}{25}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Descripción ética de la investigación}{25}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Población y muestra}{26}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Procedimiento}{26}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Técnicas e instrumentos}{27}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Técnicas}{27}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Instrumentos}{28}{subsubsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.8}Estadístico de la investigación}{28}{subsection.4.8}%
+\contentsline {section}{\textbf {CAPÍTULO V}}{30}{equation.4.7}%
+\contentsline {section}{\textbf {RESULTADOS Y DISCUSIONES}}{30}{equation.4.7}%
+\contentsline {subsection}{\numberline {5.1}Resultados para el objetivo específico 1: Precisión de la digitalización de fórmulas y apuntes técnicos frente a métodos tradicionales}{30}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Análisis Comparativo de la Tasa de Error de Caracteres (CER) y Tiempos de Consolidación de Notas}{30}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}Resultados para el objetivo específico 2: Nivel de fidelidad y veracidad de la información académica y mitigación de alucinaciones}{31}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Evaluación del Middleware RAG frente a Modelos de Lenguaje Genéricos}{31}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}Resultados para el objetivo específico 3: Impacto de mapas conceptuales interconectados y evaluaciones automatizadas en el rendimiento académico y sobrecarga cognitiva}{32}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Correlación Empírica entre el Uso de Grafos Semánticos, Quizzes de Repaso y Calificaciones}{32}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.4}Contrastación de la hipótesis general}{34}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Formulación de hipótesis}{35}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Nivel de significancia}{35}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Selección de la prueba Variable}{35}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Estadístico de prueba}{36}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Región crítica y decisión estadística}{36}{subsubsection.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.6}Interpretación estadística}{37}{subsubsection.5.4.6}%
+\contentsline {subsubsection}{\numberline {5.4.7}Conclusión de la hipótesis general}{38}{subsubsection.5.4.7}%
+\contentsline {subsection}{\numberline {5.5}Discusión}{38}{subsection.5.5}%
+\contentsline {section}{\textbf {CAPÍTULO VI}}{39}{subsection.5.5}%
+\contentsline {section}{\textbf {CONCLUSIONES Y RECOMENDACIONES}}{39}{subsection.5.5}%
+\contentsline {subsection}{\numberline {6.1}Conclusiones}{39}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Recomendaciones}{40}{subsection.6.2}%
+\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{41}{subsection.6.2}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -136,4 +152,4 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{ANEXOS}{37}{subsection.5.3}%
+\contentsline {section}{\textbf {ANEXOS}}{46}{subsection.6.2}%

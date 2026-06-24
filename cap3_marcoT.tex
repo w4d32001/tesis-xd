@@ -57,6 +57,40 @@ integra grafos de conocimiento en el proceso de recuperación para capturar rela
 estructuradas entre conceptos, superando las limitaciones de la recuperación puramente 
 vectorial \parencite{KleselWittmannRAG2025}.
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.5cm and 1.8cm,
+        box/.style={draw, rectangle, rounded corners, fill=blue!10, text width=2.5cm, align=center, minimum height=1.2cm, font=\small},
+        cloud/.style={draw, ellipse, fill=yellow!15, text width=2.2cm, align=center, minimum height=1.2cm, font=\small},
+        arrow/.style={-Stealth, thick}
+    ]
+        % Row 1
+        \node[box] (query) {Pregunta del Usuario};
+        \node[box, right=of query] (embed) {Modelo de Embeddings};
+        \node[box, right=of embed] (search) {Búsqueda por Similitud};
+        
+        % Row 2
+        \node[cloud, below=of search] (db) {Base de Datos Vectorial};
+        
+        % Row 3
+        \node[box, below=of embed] (context) {Contexto Recuperado};
+        \node[box, below=of query] (llm) {LLM (Generador)};
+        \node[box, left=of llm] (response) {Respuesta Final};
+        
+        % Arrows
+        \draw[arrow] (query) -- (embed);
+        \draw[arrow] (embed) -- (search);
+        \draw[arrow] (search) -- (db);
+        \draw[arrow] (db) -- (context);
+        \draw[arrow] (context) -- (llm);
+        \draw[arrow] (llm) -- (response);
+        \draw[arrow] (query) -- (llm);
+    \end{tikzpicture}
+    \caption{Arquitectura general del sistema de Generación Aumentada por Recuperación (RAG).}
+    \label{fig:rag_architecture}
+\end{figure}
+
 \subsubsection{Arquitectura Transformer y Mecanismo de Atención}
 
 El fundamento técnico de los LLMs y de los modelos de visión empleados en el presente 
@@ -78,6 +112,38 @@ cuadrada actúa como factor de escala para estabilizar los gradientes
 ejecuta múltiples operaciones de atención en paralelo sobre distintos subespacios de 
 representación, permitiendo al modelo capturar simultáneamente dependencias sintácticas, 
 semánticas y de largo alcance en el texto \parencite{Vaswani2017}.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1cm and 1.5cm,
+        op/.style={draw, circle, fill=yellow!20, minimum size=0.8cm, font=\small},
+        val/.style={draw, rectangle, fill=green!10, minimum width=1.5cm, minimum height=0.6cm, font=\small},
+        arrow/.style={-Stealth, thick}
+    ]
+        % Nodes
+        \node[val] (q) {Queries ($Q$)};
+        \node[val, right=of q] (k) {Keys ($K$)};
+        \node[val, right=of k] (v) {Values ($V$)};
+        
+        \node[op, below=of k] (matmul1) {$\otimes$};
+        \node[op, below=of matmul1] (scale) {$\div \sqrt{d_k}$};
+        \node[op, below=of scale] (softmax) {Softmax};
+        \node[op, below=of softmax, xshift=1.2cm] (matmul2) {$\otimes$};
+        \node[val, below=of matmul2] (out) {Atención ($Attention$)};
+        
+        % Connections
+        \draw[arrow] (q) |- (matmul1);
+        \draw[arrow] (k) -- (matmul1);
+        \draw[arrow] (matmul1) -- (scale);
+        \draw[arrow] (scale) -- (softmax);
+        \draw[arrow] (softmax) |- (matmul2);
+        \draw[arrow] (v) |- (matmul2);
+        \draw[arrow] (matmul2) -- (out);
+    \end{tikzpicture}
+    \caption{Mecanismo de auto-atención escalada por producto punto (Scaled Dot-Product Attention).}
+    \label{fig:self_attention_mechanism}
+\end{figure}
 
 Esta arquitectura fue posteriormente adaptada al dominio de la visión por computadora 
 mediante el Vision Transformer (ViT), que divide una imagen en parches (\textit{patches}) 
@@ -119,6 +185,28 @@ actualmente el referente de evaluación para estos modelos \parencite{AlvarezPer
 En el contexto peruano, arquitecturas preentrenadas de esta familia han demostrado ser 
 viables incluso para manuscritos con alta variabilidad caligráfica \parencite{TarazonaCruz2024}.
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=2.2cm,
+        stage/.style={draw, rectangle, fill=orange!15, text width=3cm, align=center, minimum height=1cm, rounded corners, font=\small},
+        arrow/.style={-Stealth, thick}
+    ]
+        % Nodes
+        \node[stage] (img) {Imagen de Apunte (Manuscrito)};
+        \node[stage, right=of img] (enc) {Codificador de Visión (ViT)};
+        \node[stage, right=of enc] (dec) {Decodificador de Texto (RoBERTa)};
+        \node[stage, below=of dec] (latex) {Código \LaTeX{} estructurado};
+        
+        % Connections
+        \draw[arrow] (img) -- (enc);
+        \draw[arrow] (enc) -- node[above, font=\scriptsize] {Embeddings visuales} (dec);
+        \draw[arrow] (dec) -- (latex);
+    \end{tikzpicture}
+    \caption{Flujo de procesamiento híbrido de visión y lenguaje del modelo TrOCR.}
+    \label{fig:trocr_flow_diagram}
+\end{figure}
+
 \subsubsection{\textit{Vector Embeddings} y Bases de Datos Vectoriales}
 
 Los \textit{embeddings} vectoriales son representaciones numéricas de alta dimensión que 
@@ -146,6 +234,31 @@ unificada — datos relacionales y vectores en una sola base de datos — simpli
 significativamente la infraestructura del sistema y elimina la necesidad de sincronizar 
 datos entre una base de datos relacional y un almacén vectorial independiente.
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.2, >=stealth, thick]
+        % Coordinate axis
+        \draw[->] (0,0,0) -- (4,0,0) node[anchor=north east, font=\small]{Dimensión 1};
+        \draw[->] (0,0,0) -- (0,3.5,0) node[anchor=north west, font=\small]{Dimensión 2};
+        \draw[->] (0,0,0) -- (0,0,4) node[anchor=south, font=\small]{Dimensión 3};
+        
+        % Vector points
+        \draw[fill=blue!50, opacity=0.7] (2,2.5,1) circle (2.5pt) node[anchor=south west, font=\small] {\textbf{v1} (Cálculo)};
+        \draw[fill=blue!50, opacity=0.7] (2.2,2.3,1.2) circle (2.5pt) node[anchor=north west, font=\small] {\textbf{v2} (Derivadas)};
+        \draw[fill=red!50, opacity=0.7] (0.8,0.8,3) circle (2.5pt) node[anchor=east, font=\small] {\textbf{v3} (IA / LLM)};
+        
+        % Cosine similarity arcs/lines
+        \draw[dashed, ->, blue] (0,0,0) -- (2,2.5,1);
+        \draw[dashed, ->, blue] (0,0,0) -- (2.2,2.3,1.2);
+        \draw[dashed, ->, red] (0,0,0) -- (0.8,0.8,3);
+        
+        \draw[double, <->, blue!70!black] (1.2,1.5,0.6) to[bend left=10] node[midway, right, font=\scriptsize] {$\theta \approx 0$ (Cercanos)} (1.3,1.35,0.7);
+        \draw[double, <->, red!70!black] (1.2,1.5,0.6) to[bend right=20] node[midway, below left, font=\scriptsize] {$\theta \gg 0$ (Lejanos)} (0.4,0.4,1.5);
+    \end{tikzpicture}
+    \caption{Similitud de coseno entre vectores en un espacio de embeddings multidimensional.}
+    \label{fig:cosine_similarity_embeddings}
+\end{figure}
+
 \subsubsection{Grafos de Conocimiento}
 
 Los Grafos de Conocimiento son estructuras matemáticas que representan la información 
@@ -172,6 +285,27 @@ contextualmente relevantes que la búsqueda vectorial clásica no identificaría
 PostgreSQL con \texttt{pgvector} garantiza la integridad, el indexado veloz y el 
 almacenamiento seguro de los metadatos y vectores de las entidades semánticas 
 \parencite{Afian2025, Upadhyay2026}.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=2cm,
+        node/.style={draw, circle, fill=purple!15, text width=1.8cm, align=center, minimum size=1.8cm, font=\small},
+        arrow/.style={-Stealth, thick}
+    ]
+        % Nodes
+        \node[node] (std) {Estudiante};
+        \node[node, right=of std, xshift=1cm] (deriv) {Tema: Derivadas};
+        \node[node, below=of deriv] (lim) {Tema: Límites};
+        
+        % Connections
+        \draw[arrow] (std) -- node[above, font=\scriptsize] {estudia} (deriv);
+        \draw[arrow] (deriv) -- node[right, font=\scriptsize] {requiere} (lim);
+        \draw[arrow] (std) -- node[below left, font=\scriptsize] {revisa} (lim);
+    \end{tikzpicture}
+    \caption{Grafo relacional de conocimiento representando la progresión del estudiante.}
+    \label{fig:educational_knowledge_graph}
+\end{figure}
 
 \subsubsection{Generación Automática de Evaluaciones Adaptativas}
 
@@ -217,6 +351,41 @@ estructuración y refuerzo del aprendizaje \parencite{SpacedRepetitionLLM2025}. 
 contexto de SynapTome, este módulo se articula directamente con el motor de grafos de 
 conocimiento: los nodos con menor frecuencia de revisión o menor puntuación de dominio 
 activan automáticamente la generación de nuevas instancias de práctica de recuperación.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Modelo de Olvido y Repetición Espaciada},
+            xlabel={Tiempo (Días)},
+            ylabel={Retención de Memoria (\%)},
+            xmin=0, xmax=10,
+            ymin=0, ymax=100,
+            xtick={0,2,4,6,8,10},
+            ytick={0,20,40,60,80,100},
+            legend pos=south west,
+            ymajorgrids=true,
+            grid style=dashed,
+            width=0.85\textwidth,
+            height=6cm,
+            font=\small
+        ]
+            % Curve 1: initial learning (day 0)
+            \addplot[color=red, domain=0:10, samples=50, thick] {100*exp(-x/1.5)};
+            \addlegendentry{Sin repaso}
+            
+            % Curve 2: review at day 1
+            \addplot[color=blue, domain=1:10, samples=50, thick] {100*exp(-(x-1)/3.5)};
+            \addlegendentry{1er Repaso}
+            
+            % Curve 3: review at day 4
+            \addplot[color=green!60!black, domain=4:10, samples=50, thick] {100*exp(-(x-4)/7.5)};
+            \addlegendentry{2do Repaso}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Curva del olvido de Ebbinghaus y el impacto de los repasos programados.}
+    \label{fig:forgetting_curve_rep_esp}
+\end{figure}
 
 \subsubsection{Aprendizaje Colaborativo Mediado por Tecnología}
 
@@ -295,7 +464,24 @@ servicios de infraestructura como PostgreSQL o los motores de LLM, asegurando qu
 la integración de nuevas tecnologías de IA no afecte el núcleo lógico del sistema 
 \parencite{Afian2025}.
 
-
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.85, font=\small]
+        % Concentric circles
+        \draw[fill=blue!5, draw=blue!50!black, thick] (0,0) circle (4.42cm);
+        \draw[fill=blue!10, draw=blue!50!black, thick] (0,0) circle (3.315cm);
+        \draw[fill=blue!15, draw=blue!50!black, thick] (0,0) circle (2.21cm);
+        \draw[fill=blue!20, draw=blue!50!black, thick] (0,0) circle (1.105cm);
+        
+        % Labels
+        \node at (0,0) [align=center] {\textbf{Entidades}};
+        \node at (0,1.95) [align=center, fill=blue!15, inner sep=2pt, rounded corners=2pt] {\textbf{Casos de Uso}};
+        \node at (0,3.25) [align=center, fill=blue!10, inner sep=2pt, rounded corners=2pt] {\textbf{Adaptadores}\\\textbf{de Interfaz}};
+        \node at (0,4.55) [align=center, fill=blue!5, inner sep=2pt, rounded corners=2pt] {\textbf{Frameworks y Drivers}};
+    \end{tikzpicture}
+    \caption{Capas concéntricas de dependencias bajo el diseño de Arquitectura Limpia.}
+    \label{fig:clean_architecture_layers}
+\end{figure}
 
 % ================== MARCO CONCEPTUAL ==================
 \subsection{Marco conceptual}

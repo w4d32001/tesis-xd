@@ -22,7 +22,7 @@
 \usepackage{float}
 \usepackage{dashrule}
 \usepackage{subfig}
-\usetikzlibrary{intersections,calc}
+\usetikzlibrary{intersections,calc,positioning,shapes.geometric,arrows.meta,chains,babel}
 \usepackage{pdfpages}
 \usepackage{listings}
 \usepackage{color}
@@ -529,9 +529,19 @@
 \setcounter{subsection}{0}
 \begin{center}
 \textbf{CAPÍTULO V}\\
-\textbf{ADMINISTRACIÓN DEL PROYECTO}
+\textbf{RESULTADOS Y DISCUSIONES}
 \end{center}
-\input{cap05_ad_proyecto}
+\input{cap5_resultados_discusiones}
+
+\clearpage
+\blanklines{4}
+\setcounter{section}{6}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{CAPÍTULO VI}\\
+\textbf{CONCLUSIONES Y RECOMENDACIONES}
+\end{center}
+\input{cap6_conclusiones}
 
 % --- Bibliografía ---
 \newpage
@@ -539,7 +549,7 @@
 \begin{center}
 \textbf{REFERENCIAS BIBLIOGRÁFICAS}
 \end{center}
-\addcontentsline{toc}{section}{REFERENCIAS BIBLIOGRÁFICAS}
+\addcontentsline{toc}{section}{\textbf{REFERENCIAS BIBLIOGRÁFICAS}}
 \printbibliography[heading=none]
 \clearpage
 \newpage
@@ -547,7 +557,7 @@
 %--ANEXOS----
 \blanklines{10}
 \begin{center}
-\addcontentsline{toc}{section}{ANEXOS}
+\addcontentsline{toc}{section}{\textbf{ANEXOS}}
 \noindent \hspace*{0.5cm}\Large \textbf{ANEXOS}
 \end{center}
 \newpage
