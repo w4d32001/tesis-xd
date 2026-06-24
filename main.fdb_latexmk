@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1782139706.56152 "main.bcf" "main.bbl" "main" 1782273065.66754 0
+["biber main"] 1782139706.56152 "main.bcf" "main.bbl" "main" 1782273145.96773 0
   "OLD_BIBLIO.bib" 1781918015 24603 3f9c6a169f0773fc00cefa6a6f3f405e ""
-  "main.bcf" 1782273063 117805 7ede8206459d319a4e1d46b5c5f22a1c "pdflatex"
+  "main.bcf" 1782273144 117805 7ede8206459d319a4e1d46b5c5f22a1c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782273037.91079 "c:/Users/r2d2/Downloads/Nueva carpeta (15)/main.tex" "main.pdf" "main" 1782273065.66923 2
+["pdflatex"] 1782273135.07519 "c:/Users/r2d2/Downloads/Nueva carpeta (15)/main.tex" "main.pdf" "main" 1782273145.96917 0
   "ANEXOS.tex" 1781284238 8463 e70daf3a9db29618c270b9f569a034e2 ""
   "C:/Users/r2d2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781232636 164858 1926c8d7bd1823f0c8393a5c0272d2d9 ""
   "C:/Users/r2d2/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1780271334 13333003 0fa45f3559f4575ed08ced66d5c4703f ""
@@ -355,14 +355,14 @@
   "caratula.tex" 1781915498 1070 c2a36e9b272639da2fbf3c52b73636e1 ""
   "datos_generales.tex" 1781918444 768 09029ac657424ec4d6ca37cd703cf005 ""
   "introduccion.tex" 1780293048 4724 7b5abec6d5ec32fae8fe982ff0a7306e ""
-  "main.aux" 1782273062 25499 0934e70005e6e6ed54e7e4ea08200cfc "pdflatex"
-  "main.bbl" 1782139719 85222 db9b4114b1e97149bb7a9bcd5c486264 "biber main"
-  "main.lof" 1782273063 2601 d76b1a16f428f3d3dbde9802c97bb52f "pdflatex"
-  "main.lot" 1782273063 3363 6ddf9e8645830ca73f3cae9b4698be86 "pdflatex"
-  "main.out" 1782273063 11415 f32a9caef4c65830ba0607843a6c0837 "pdflatex"
-  "main.run.xml" 1782273063 2457 8664f181ad873c967e43245fda2bbd77 "pdflatex"
+  "main.aux" 1782273144 25480 d149456a7d94bbf11d277d93238eb96e "pdflatex"
+  "main.bbl" 1782273090 85222 db9b4114b1e97149bb7a9bcd5c486264 "biber main"
+  "main.lof" 1782273144 2601 d76b1a16f428f3d3dbde9802c97bb52f "pdflatex"
+  "main.lot" 1782273144 3363 6ddf9e8645830ca73f3cae9b4698be86 "pdflatex"
+  "main.out" 1782273144 11415 f32a9caef4c65830ba0607843a6c0837 "pdflatex"
+  "main.run.xml" 1782273144 2457 8664f181ad873c967e43245fda2bbd77 "pdflatex"
   "main.tex" 1782272933 12974 05ff76f9183880a05e0e31d9a5e24c45 ""
-  "main.toc" 1782273063 7974 a628d1f8f1eb4bb19796a4efab61d1f6 "pdflatex"
+  "main.toc" 1782273144 7955 e7e716369c5e78f33bfa83fba7520318 "pdflatex"
   "pipeline.png" 1779413136 1608483 f700cc4a4400f77af3ce83fa4ce25898 ""
   (generated)
   "main.aux"
