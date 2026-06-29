@@ -4,7 +4,7 @@
 
 \subsection{Tipo y nivel de investigación}
 
-La presente investigación se clasifica por su propósito como Tecnológica Aplicada, dado que busca resolver un problema práctico y concreto: la sobrecarga cognitiva y la desorganización de apuntes en el entorno universitario, mediante el desarrollo de una solución de software (SynapTome). Por su alcance y profundidad, el estudio corresponde a un nivel explicativo-experimental (específicamente, un diseño cuasi-experimental). Este nivel permite no solo describir el ecosistema desarrollado, sino también determinar las relaciones de causa y efecto que la Variable Independiente (el ecosistema basado en RAG, TrOCR y Grafos de Conocimiento) ejerce sobre la Variable Dependiente (la retención de conocimientos y el nivel de colaboración). Como señalan \textcite{Kreijkes2026}, el uso de diseños experimentales en entornos educativos es fundamental para cuantificar de manera objetiva los efectos de las herramientas basadas en LLMs sobre la comprensión lectora y la memoria de los estudiantes.
+La presente investigación se clasifica por su propósito como Tecnológica Aplicada, dado que busca resolver un problema práctico y concreto: la sobrecarga cognitiva y la desorganización de apuntes en el entorno universitario, mediante el desarrollo de una solución de software (SynapTome). Por su alcance y profundidad, el estudio corresponde a un nivel explicativo-experimental (específicamente, un diseño cuasi-experimental). Este nivel permite no solo describir el ecosistema desarrollado, sino también determinar las relaciones de causa y efecto que la Variable Independiente (el ecosistema basado en RAG, TrOCR y Grafos de Conocimiento) ejerce sobre la Variable Dependiente (la retención de conocimientos, el rendimiento académico y el aprendizaje colaborativo). Como señalan \textcite{Kreijkes2026}, el uso de diseños experimentales en entornos educativos es fundamental para cuantificar de manera objetiva los efectos de las herramientas basadas en LLMs sobre la comprensión lectora y la memoria de los estudiantes.
 
 \subsection{Diseño de la investigación}
 
@@ -12,7 +12,7 @@ Para abordar la complejidad del ecosistema SynapTome, el diseño metodológico s
 
 \begin{itemize}
   \item Diseño de Ingeniería de Software: Se empleará la metodología ágil Scrum. Según \textcite{Afian2025}, las metodologías ágiles soportan el desarrollo iterativo, la retroalimentación continua y la adaptabilidad, características esenciales para el desarrollo exitoso de plataformas de tutoría impulsadas por inteligencia artificial. El desarrollo se estructurará en sprints que abarcarán la planificación, el diseño, la implementación del backend y los pipelines de IA, y las pruebas continuas de las funciones.
-  \item Diseño de Evaluación (Validación): Se utilizará un diseño de tipo pre-test / post-test con un grupo cuasi-experimental. Se medirá el desempeño académico (retención de conocimientos) de los estudiantes antes de la adopción del ecosistema SynapTome y, tras un periodo de uso continuo de la herramienta, se aplicará un post-test para evaluar el impacto real generado por la plataforma interactiva y colaborativa.
+  \item Diseño de Evaluación (Validación): Se utilizará un diseño de tipo pre-test / post-test con un grupo cuasi-experimental. Se medirá el desempeño académico (retención de conocimientos) de los estudiantes antes de la adopción del ecosistema SynapTome y, tras un periodo de uso continuo de la herramienta, se aplicará un post-test para evaluar el impacto real generado por la plataforma interactiva y colaborativa en la retención del conocimiento y en el fortalecimiento del aprendizaje colaborativo entre pares.
 \end{itemize}
 
 \subsection{Pipeline del sistema}
@@ -123,7 +123,7 @@ Ficha de evaluación de fidelidad conceptual & Calidad factual del repaso (reduc
 Cuestionario NASA-TLX (Carga Mental) & Sobrecarga cognitiva y fatiga mental del estudiante en su autoestudio & Escala ordinal de carga de trabajo (0--100 ptos) & \parencite{Hart1988} \\
 \hline
 
-Cuestionario de usabilidad adaptado (SUS) & Eficiencia operativa en la organización colaborativa de apuntes en red & Puntuación normalizada SUS (0--100 ptos) & \parencite{Afian2025} \\
+Cuestionario de usabilidad (SUS) y Ficha de monitoreo web & Eficiencia operativa y frecuencia del aprendizaje colaborativo en red & Puntuación normalizada SUS (0--100) e intercambio colaborativo (ítems/semana) & \parencite{Afian2025} \\
 \hline
 
 Evaluación Pre-test / Post-test de retención & Rendimiento académico e incremento de la fijación conceptual a largo plazo & Calificación cuantitativa (Escala vigesimal 0--20) & \parencite{Kreijkes2026} \\

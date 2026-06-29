@@ -306,13 +306,13 @@
 
 % --- Sangrías: títulos sin número al margen, numerados con sangría ---
 \renewcommand{\cftsecindent}{0pt}
-\renewcommand{\cftsubsecindent}{2em}
-\renewcommand{\cftsubsubsecindent}{4em}
+\renewcommand{\cftsubsecindent}{1.2em}
+\renewcommand{\cftsubsubsecindent}{1.2em}
 
 % --- Espacio reservado para los números ---
 \setlength{\cftsecnumwidth}{2.2em}
-\setlength{\cftsubsecnumwidth}{3.2em}
-\setlength{\cftsubsubsecnumwidth}{4.2em}
+\setlength{\cftsubsecnumwidth}{3.0em}
+\setlength{\cftsubsubsecnumwidth}{3.0em}
 
 % --- Líneas punteadas en todos los niveles ---
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -413,28 +413,28 @@
 \noindent
 \input{caratula}
 
-\input{contraportada}
-\nolinenumbers
+% \input{contraportada}
+% \nolinenumbers
 
-\newpage
-\thispagestyle{empty}
-\input{Constancia_originalidad}
+% \newpage
+% \thispagestyle{empty}
+% \input{Constancia_originalidad}
 
-\newpage
-\thispagestyle{empty}
-\input{agradecimientos}
+% \newpage
+% \thispagestyle{empty}
+% \input{agradecimientos}
 
-\newpage
-\thispagestyle{empty}
-\input{dedicatoria}
-\linenumbers
+% \newpage
+% \thispagestyle{empty}
+% \input{dedicatoria}
+% \linenumbers
 
 \newpage
 
 % --- INDICE GENERAL ---
 \clearpage
 \pagenumbering{gobble}
-\thispagestyle{empty}
+\pagestyle{empty}
 \blanklines{4}
 
 \renewcommand{\contentsname}{%
@@ -443,8 +443,13 @@
 
 \addtocontents{toc}{\protect\flushright{\fontsize{12pt}{12pt}\selectfont Pag.}\par}
 
+\begingroup
+\makeatletter
+\renewcommand{\numberline}[1]{#1\quad}
+\makeatother
 \tableofcontents
-\thispagestyle{empty}
+\endgroup
+\clearpage
 
 % --- INDICE DE TABLAS---
 \clearpage
@@ -477,7 +482,14 @@
 \end{center}
 \input{introduccion}
 
-
+\clearpage
+\blanklines{4}
+\setcounter{section}{1}
+\setcounter{subsection}{0}
+\begin{center}
+\textbf{DATOS GENERALES}
+\end{center}
+\input{datos_generales}
 
 % --- CAPÍTULO I ---
 \clearpage
@@ -524,24 +536,34 @@
 \input{cap4_metodologia}
 
 \clearpage
-\blanklines{4}
+\blanklines{5}
 \setcounter{section}{5}
 \setcounter{subsection}{0}
 \begin{center}
 \textbf{CAPÍTULO V}\\
-\textbf{RESULTADOS Y DISCUSIONES}
+\textbf{ADMINISTRACIÓN DEL PROYECTO}
 \end{center}
-\input{cap5_resultados_discusiones}
+\input{cap05_ad_proyecto.tex}
 
-\clearpage
-\blanklines{4}
-\setcounter{section}{6}
-\setcounter{subsection}{0}
-\begin{center}
-\textbf{CAPÍTULO VI}\\
-\textbf{CONCLUSIONES Y RECOMENDACIONES}
-\end{center}
-\input{cap6_conclusiones}
+% \clearpage
+% \blanklines{4}
+% \setcounter{section}{5}
+% \setcounter{subsection}{0}
+% \begin{center}
+% \textbf{CAPÍTULO V}\\
+% \textbf{RESULTADOS Y DISCUSIONES}
+% \end{center}
+% \input{cap5_resultados_discusiones}
+
+% \clearpage
+% \blanklines{4}
+% \setcounter{section}{6}
+% \setcounter{subsection}{0}
+% \begin{center}
+% \textbf{CAPÍTULO VI}\\
+% \textbf{CONCLUSIONES Y RECOMENDACIONES}
+% \end{center}
+% \input{cap6_conclusiones}
 
 % --- Bibliografía ---
 \newpage
