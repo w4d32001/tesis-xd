@@ -43,22 +43,100 @@
 \contentsline {subsubsection}{\numberline {3.2.10}Privacidad y Seguridad de Datos Estudiantiles en Plataformas IA}{22}{subsubsection.3.2.10}%
 \contentsline {subsubsection}{\numberline {3.2.11}Arquitectura Limpia (\textit {Clean Architecture})}{23}{subsubsection.3.2.11}%
 \contentsline {subsection}{\numberline {3.3}Marco conceptual}{24}{subsection.3.3}%
-\contentsline {section}{\textbf {CAPÍTULO IV}}{26}{Item.26}%
-\contentsline {section}{\textbf {METODOLOGÍA}}{26}{Item.26}%
-\contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{26}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{26}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Pipeline del sistema}{27}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Descripción ética de la investigación}{27}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Población y muestra}{28}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Procedimiento}{28}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Técnicas e instrumentos}{29}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Técnicas}{29}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Instrumentos}{30}{subsubsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.8}Estadístico de la investigación}{30}{subsection.4.8}%
-\contentsline {section}{\textbf {CAPÍTULO V}}{32}{equation.4.7}%
-\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{32}{equation.4.7}%
-\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{32}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Presupuesto}{35}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{35}{subsection.5.3}%
-\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{37}{subsection.5.3}%
-\contentsline {section}{\textbf {ANEXOS}}{38}{subsection.5.3}%
+\contentsline {section}{\textbf {CAPÍTULO IV}}{28}{Item.29}%
+\contentsline {section}{\textbf {METODOLOGÍA}}{28}{Item.29}%
+\contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{28}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Pipeline del sistema}{29}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Descripción ética de la investigación}{29}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Población y muestra}{30}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Procedimiento}{30}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Técnicas e instrumentos}{31}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Técnicas}{31}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Instrumentos}{32}{subsubsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.8}Estadístico de la investigación}{32}{subsection.4.8}%
+\contentsline {section}{\textbf {CAPÍTULO V}}{34}{equation.4.7}%
+\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{34}{equation.4.7}%
+\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{34}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Presupuesto}{37}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{37}{subsection.5.3}%
+\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{39}{subsection.5.3}%
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\textbf {ANEXOS}}{44}{subsection.5.3}%

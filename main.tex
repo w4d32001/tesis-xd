@@ -12,9 +12,7 @@
 \usepackage{amsmath, amsfonts}
 \usepackage{graphicx}
 \usepackage{alltt}
-\usepackage{hyperref}
-%\usepackage{lmodern}
-\usepackage{hyperref}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=blue, urlcolor=blue]{hyperref}
 \usepackage{tikz}
 \usepackage{gensymb}
 \usepackage[titletoc]{appendix}
@@ -78,20 +76,35 @@
 
 \usepackage[style=iso-authoryear,backend=biber]{biblatex}
 \addbibresource{OLD_BIBLIO.bib}
+\setlength{\bibhang}{0pt} % Sin sangría francesa en la bibliografía (recto)
+\setlength{\bibitemsep}{0pt} % Sin espacio vertical de biblatex
+\renewbibmacro*{finentry}{\finentry\par ~} % Línea en blanco numerada entre referencias
+
 %%mayuscula los autores
 \AtBeginBibliography{%
   \renewcommand*{\mkbibnamefamily}[1]{\MakeUppercase{#1}}%
 }
 
-% --- Color azul en TODAS las citas ---
-\usepackage{xcolor}
+% --- Citas en negrita (formato APA) ---
+\AtEveryCite{\bfseries}
 
-% Paréntesis en azul
-\let\oldmkbibparens\mkbibparens
-\renewcommand*{\mkbibparens}[1]{\textcolor{blue}{\oldmkbibparens{#1}}}
+\DeclareFieldFormat{citehyperref}{%
+  \DeclareFieldAlias{bibhyperref}{noformat}%
+  \bibhyperref{#1}}
 
-\usepackage{xcolor}
-\AtEveryCitekey{\color{blue}}
+\savebibmacro{cite}
+\renewbibmacro*{cite}{%
+  \printtext[citehyperref]{%
+    \restorebibmacro{cite}%
+    \usebibmacro{cite}}}
+
+\savebibmacro{textcite}
+\renewbibmacro*{textcite}{%
+  \printtext[citehyperref]{%
+    \restorebibmacro{textcite}%
+    \usebibmacro{textcite}}}
+
+
 
 \usepackage{enumerate}
 \usepackage{enumitem}
@@ -231,7 +244,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{%
-\textbf{- \thepage}\ de\ \textbf{\pageref{LastPage} -}%
+\textbf{- \thepage}\ de\ \textbf{\pageref*{LastPage} -}%
 }
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
@@ -572,6 +585,7 @@
 \textbf{REFERENCIAS BIBLIOGRÁFICAS}
 \end{center}
 \addcontentsline{toc}{section}{\textbf{REFERENCIAS BIBLIOGRÁFICAS}}
+~\par
 \printbibliography[heading=none]
 \clearpage
 \newpage

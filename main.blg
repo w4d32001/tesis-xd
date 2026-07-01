@@ -1,5 +1,22 @@
-[1] Config.pm:328> INFO - This is Biber 2.21
-[1] Config.pm:331> INFO - Logfile is 'main.blg'
-[408] biber-MSWIN64:342> INFO - === 
-[1880] Utils.pm:479> ERROR - Cannot find control file 'main.bcf'! - Did latex run successfully on your .tex file before you ran biber?
-[1880] Biber.pm:137> INFO - ERRORS: 1
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'main.blg'
+[196] biber-MSWIN64:342> INFO - === 
+[262] Biber.pm:421> INFO - Reading 'main.bcf'
+[520] Biber.pm:1002> INFO - Found 40 citekeys in bib section 0
+[551] Biber.pm:4487> INFO - Processing section 0
+[574] Biber.pm:4678> INFO - Looking for bibtex file 'OLD_BIBLIO.bib' for section 0
+[673] bibtex.pm:1713> INFO - LaTeX decoding ...
+[821] bibtex.pm:1519> INFO - Found BibTeX data source 'OLD_BIBLIO.bib'
+[1530] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1530] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1530] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[1655] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1736] bbl.pm:779> INFO - Output to main.bbl
+[1737] Biber.pm:132> WARN - Duplicate entry key: 'Martin2017' in file 'OLD_BIBLIO.bib', skipping ...
+[1737] Biber.pm:132> WARN - Duplicate entry key: 'AlvarezPerez2026' in file 'OLD_BIBLIO.bib', skipping ...
+[1738] Biber.pm:132> WARN - Duplicate entry key: 'KardanMoghaddam2025' in file 'OLD_BIBLIO.bib', skipping ...
+[1738] Biber.pm:132> WARN - Duplicate entry key: 'SoumyaKrishnamoorthy2025' in file 'OLD_BIBLIO.bib', skipping ...
+[1738] Biber.pm:132> WARN - Duplicate entry key: 'Cahyadi2026' in file 'OLD_BIBLIO.bib', skipping ...
+[1738] Biber.pm:132> WARN - Duplicate entry key: 'Kreijkes2026' in file 'OLD_BIBLIO.bib', skipping ...
+[1739] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\r2d2\AppData\Local\Temp\biber_tmp_mqxq\dbde5497e610dc29d512d28dd9860b51_15884.utf8, line 369, warning: 137 characters of junk seen at toplevel
+[1739] Biber.pm:134> INFO - WARNINGS: 7

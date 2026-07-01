@@ -809,6 +809,8 @@ INPUT cap05_ad_proyecto.tex
 INPUT C:\Users\r2d2\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-ot1.tfm
 INPUT C:\Users\r2d2\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntx-Italic-tlf-ot1.vf
 INPUT C:\Users\r2d2\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-ot1r.tfm
+INPUT C:\Users\r2d2\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-ot1.tfm
+INPUT C:\Users\r2d2\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\newtx\ntx-ot1-tlf-pc.enc
 INPUT .\ANEXOS.tex
 INPUT .\ANEXOS.tex
 INPUT .\ANEXOS.tex
