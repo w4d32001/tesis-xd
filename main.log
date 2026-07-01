@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  30 JUN 2026 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  30 JUN 2026 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1793,6 +1793,10 @@ LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 13.
+LaTeX Info: Redefining \. on input line 423.
+LaTeX Info: Redefining \% on input line 423.
+LaTeX Info: Redefining \. on input line 424.
+LaTeX Info: Redefining \% on input line 424.
 LaTeX Info: Redefining \. on input line 425.
 LaTeX Info: Redefining \% on input line 425.
 LaTeX Info: Redefining \. on input line 426.
@@ -1821,10 +1825,10 @@ LaTeX Info: Redefining \. on input line 437.
 LaTeX Info: Redefining \% on input line 437.
 LaTeX Info: Redefining \. on input line 438.
 LaTeX Info: Redefining \% on input line 438.
-LaTeX Info: Redefining \. on input line 439.
-LaTeX Info: Redefining \% on input line 439.
 LaTeX Info: Redefining \. on input line 440.
 LaTeX Info: Redefining \% on input line 440.
+LaTeX Info: Redefining \. on input line 441.
+LaTeX Info: Redefining \% on input line 441.
 LaTeX Info: Redefining \. on input line 442.
 LaTeX Info: Redefining \% on input line 442.
 LaTeX Info: Redefining \. on input line 443.
@@ -1849,10 +1853,10 @@ LaTeX Info: Redefining \. on input line 452.
 LaTeX Info: Redefining \% on input line 452.
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
-LaTeX Info: Redefining \. on input line 454.
-LaTeX Info: Redefining \% on input line 454.
 LaTeX Info: Redefining \. on input line 455.
 LaTeX Info: Redefining \% on input line 455.
+LaTeX Info: Redefining \. on input line 456.
+LaTeX Info: Redefining \% on input line 456.
 LaTeX Info: Redefining \. on input line 457.
 LaTeX Info: Redefining \% on input line 457.
 LaTeX Info: Redefining \. on input line 458.
@@ -1885,10 +1889,10 @@ LaTeX Info: Redefining \. on input line 471.
 LaTeX Info: Redefining \% on input line 471.
 LaTeX Info: Redefining \. on input line 472.
 LaTeX Info: Redefining \% on input line 472.
-LaTeX Info: Redefining \. on input line 473.
-LaTeX Info: Redefining \% on input line 473.
 LaTeX Info: Redefining \. on input line 474.
 LaTeX Info: Redefining \% on input line 474.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
 LaTeX Info: Redefining \. on input line 476.
 LaTeX Info: Redefining \% on input line 476.
 LaTeX Info: Redefining \. on input line 477.
@@ -1917,10 +1921,10 @@ LaTeX Info: Redefining \. on input line 488.
 LaTeX Info: Redefining \% on input line 488.
 LaTeX Info: Redefining \. on input line 489.
 LaTeX Info: Redefining \% on input line 489.
-LaTeX Info: Redefining \. on input line 490.
-LaTeX Info: Redefining \% on input line 490.
 LaTeX Info: Redefining \. on input line 491.
 LaTeX Info: Redefining \% on input line 491.
+LaTeX Info: Redefining \. on input line 492.
+LaTeX Info: Redefining \% on input line 492.
 LaTeX Info: Redefining \. on input line 493.
 LaTeX Info: Redefining \% on input line 493.
 LaTeX Info: Redefining \. on input line 494.
@@ -1945,10 +1949,6 @@ LaTeX Info: Redefining \. on input line 503.
 LaTeX Info: Redefining \% on input line 503.
 LaTeX Info: Redefining \. on input line 504.
 LaTeX Info: Redefining \% on input line 504.
-LaTeX Info: Redefining \. on input line 505.
-LaTeX Info: Redefining \% on input line 505.
-LaTeX Info: Redefining \. on input line 506.
-LaTeX Info: Redefining \% on input line 506.
 )
 \openout1 = `main.aux'.
 
@@ -3098,7 +3098,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-<image/unamba.png, id=488, 566.115pt x 322.20375pt>
+<image/unamba.png, id=492, 566.115pt x 322.20375pt>
 File: image/unamba.png Graphic file (type png)
 <use image/unamba.png>
 Package pdftex.def Info: image/unamba.png  used on input line 57.
@@ -3447,7 +3447,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package hyperref Warning: Suppressing link with empty target on input line 34.
 
-<pipeline.png, id=792, 1701.35625pt x 931.48pt>
+<pipeline.png, id=798, 1701.35625pt x 931.48pt>
 File: pipeline.png Graphic file (type png)
 <use pipeline.png>
 Package pdftex.def Info: pipeline.png  used on input line 38.
@@ -3665,9 +3665,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39
-
-]
+[39]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3675,10 +3673,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40
-
-
-]
+[40]
 
 Package hyperref Warning: Suppressing link with empty target on input line 178.
 
@@ -3694,6 +3689,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41
+
+
+
 
 ]
 
@@ -4002,67 +4000,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [48
 
 ] (ANEXOS.tex
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
-\OT1/minntx/m/n/8 Ecosistema in-te-li-gen-te
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+[]|\OT1/ntxtlf/b/n/8 Variable In-de-pen-
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 37--41
-\OT1/minntx/m/n/8 con vi-si[]on ar-ti-fi-cial y
+Underfull \hbox (badness 5260) in paragraph at lines 38--42
+\OT1/minntx/m/n/8 con vi-si[]on ar-ti-fi-cial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+\OT1/minntx/m/n/8 y LLM. \OT1/ntxtlf/b/n/8 Va-ria-ble
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
 \OT1/minntx/m/n/8 Aprendizaje co-la-bo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
+Underfull \hbox (badness 2165) in paragraph at lines 38--42
 \OT1/minntx/m/n/8 ra-ti-vo y ren-di-mien-to
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 43--48
-\OT1/minntx/m/n/8 * Ca-li-fi-ca-ci[]on de ex[]ame-nes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--48
+Underfull \hbox (badness 3396) in paragraph at lines 44--49
 \OT1/minntx/m/n/8 * In-ter-cam-bio co-la-bo-ra-ti-vo
  []
-
-
-Underfull \hbox (badness 3364) in paragraph at lines 70--74
-\OT1/minntx/m/n/8 M[]odu-lo de di-gi-ta-li-za-
- []
-
-
-Underfull \hbox (badness 6063) in paragraph at lines 70--74
-\OT1/minntx/m/n/8 Eficiencia de cap-tu-ra
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--130
-\OT1/minntx/m/n/8 Motor re-la-cio-nal to-
- []
-
-
-Underfull \hbox (badness 7468) in paragraph at lines 126--130
-\OT1/minntx/m/n/8 din[]ami-cas. \OT1/ntxtlf/b/n/8 Di-men-si[]on
- []
-
-
-Underfull \hbox (badness 6493) in paragraph at lines 132--134
-\OT1/minntx/m/n/8 au-to-per-ci-bi-do (Es-ca-la NASA-
- []
-
-
-Overfull \hbox (67.91257pt too wide) in paragraph at lines 146--147
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 0.28673pt on input line 147.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4071,12 +4036,64 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[49]) 
+[49
+
+]
+Underfull \hbox (badness 2126) in paragraph at lines 127--131
+\OT1/minntx/m/n/8 tual (RAG). \OT1/ntxtlf/b/n/8 Di-men-
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 137--141
+\OT1/minntx/m/n/8 * Eva-lua-ci[]on de fi-de-li-dad de
+ []
+
+
+Underfull \hbox (badness 2644) in paragraph at lines 152--156
+\OT1/minntx/m/n/8 Motor re-la-cio-nal to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+\OT1/minntx/m/n/8 al-can-za-das en ex[]ame-nes
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 158--160
+\OT1/minntx/m/n/8 estr[]es au-to-per-ci-bi-do (Es-ca-la
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 158--160
+\OT1/minntx/m/n/8 * Vo-lu-men de in-ter-cam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+\OT1/minntx/m/n/8 bio in-ter-ac-ti-vo efi-caz
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[50
+
+]) 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux
 LaTeX Info: Redefining \sptext on input line 13.
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
+LaTeX Info: Redefining \sptext on input line 423.
+LaTeX Info: Redefining \. on input line 423.
+LaTeX Info: Redefining \% on input line 423.
+LaTeX Info: Redefining \sptext on input line 424.
+LaTeX Info: Redefining \. on input line 424.
+LaTeX Info: Redefining \% on input line 424.
 LaTeX Info: Redefining \sptext on input line 425.
 LaTeX Info: Redefining \. on input line 425.
 LaTeX Info: Redefining \% on input line 425.
@@ -4119,12 +4136,12 @@ LaTeX Info: Redefining \% on input line 437.
 LaTeX Info: Redefining \sptext on input line 438.
 LaTeX Info: Redefining \. on input line 438.
 LaTeX Info: Redefining \% on input line 438.
-LaTeX Info: Redefining \sptext on input line 439.
-LaTeX Info: Redefining \. on input line 439.
-LaTeX Info: Redefining \% on input line 439.
 LaTeX Info: Redefining \sptext on input line 440.
 LaTeX Info: Redefining \. on input line 440.
 LaTeX Info: Redefining \% on input line 440.
+LaTeX Info: Redefining \sptext on input line 441.
+LaTeX Info: Redefining \. on input line 441.
+LaTeX Info: Redefining \% on input line 441.
 LaTeX Info: Redefining \sptext on input line 442.
 LaTeX Info: Redefining \. on input line 442.
 LaTeX Info: Redefining \% on input line 442.
@@ -4161,12 +4178,12 @@ LaTeX Info: Redefining \% on input line 452.
 LaTeX Info: Redefining \sptext on input line 453.
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
-LaTeX Info: Redefining \sptext on input line 454.
-LaTeX Info: Redefining \. on input line 454.
-LaTeX Info: Redefining \% on input line 454.
 LaTeX Info: Redefining \sptext on input line 455.
 LaTeX Info: Redefining \. on input line 455.
 LaTeX Info: Redefining \% on input line 455.
+LaTeX Info: Redefining \sptext on input line 456.
+LaTeX Info: Redefining \. on input line 456.
+LaTeX Info: Redefining \% on input line 456.
 LaTeX Info: Redefining \sptext on input line 457.
 LaTeX Info: Redefining \. on input line 457.
 LaTeX Info: Redefining \% on input line 457.
@@ -4215,12 +4232,12 @@ LaTeX Info: Redefining \% on input line 471.
 LaTeX Info: Redefining \sptext on input line 472.
 LaTeX Info: Redefining \. on input line 472.
 LaTeX Info: Redefining \% on input line 472.
-LaTeX Info: Redefining \sptext on input line 473.
-LaTeX Info: Redefining \. on input line 473.
-LaTeX Info: Redefining \% on input line 473.
 LaTeX Info: Redefining \sptext on input line 474.
 LaTeX Info: Redefining \. on input line 474.
 LaTeX Info: Redefining \% on input line 474.
+LaTeX Info: Redefining \sptext on input line 475.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
 LaTeX Info: Redefining \sptext on input line 476.
 LaTeX Info: Redefining \. on input line 476.
 LaTeX Info: Redefining \% on input line 476.
@@ -4263,12 +4280,12 @@ LaTeX Info: Redefining \% on input line 488.
 LaTeX Info: Redefining \sptext on input line 489.
 LaTeX Info: Redefining \. on input line 489.
 LaTeX Info: Redefining \% on input line 489.
-LaTeX Info: Redefining \sptext on input line 490.
-LaTeX Info: Redefining \. on input line 490.
-LaTeX Info: Redefining \% on input line 490.
 LaTeX Info: Redefining \sptext on input line 491.
 LaTeX Info: Redefining \. on input line 491.
 LaTeX Info: Redefining \% on input line 491.
+LaTeX Info: Redefining \sptext on input line 492.
+LaTeX Info: Redefining \. on input line 492.
+LaTeX Info: Redefining \% on input line 492.
 LaTeX Info: Redefining \sptext on input line 493.
 LaTeX Info: Redefining \. on input line 493.
 LaTeX Info: Redefining \% on input line 493.
@@ -4305,12 +4322,6 @@ LaTeX Info: Redefining \% on input line 503.
 LaTeX Info: Redefining \sptext on input line 504.
 LaTeX Info: Redefining \. on input line 504.
 LaTeX Info: Redefining \% on input line 504.
-LaTeX Info: Redefining \sptext on input line 505.
-LaTeX Info: Redefining \. on input line 505.
-LaTeX Info: Redefining \% on input line 505.
-LaTeX Info: Redefining \sptext on input line 506.
-LaTeX Info: Redefining \. on input line 506.
-LaTeX Info: Redefining \% on input line 506.
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -4323,10 +4334,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55155 strings out of 467871
- 1191236 string characters out of 5418860
- 2204414 words of memory out of 5000000
- 82864 multiletter control sequences out of 15000+600000
+ 55166 strings out of 467871
+ 1191459 string characters out of 5418860
+ 2204459 words of memory out of 5000000
+ 82873 multiletter control sequences out of 15000+600000
  712917 words of font info for 226 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,19n,133p,1978b,3182s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4342,9 +4353,9 @@ ic/newtx/ztmb.pfb><C:/Users/r2d2/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/newtx/ztmbi.pfb><C:/Users/r2d2/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/newtx/ztmr.pfb><C:/Users/r2d2/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/newtx/ztmri.pfb>
-Output written on main.pdf (55 pages, 3108996 bytes).
+Output written on main.pdf (56 pages, 3111936 bytes).
 PDF statistics:
- 1062 PDF objects out of 1200 (max. 8388607)
- 208 named destinations out of 1000 (max. 500000)
+ 1073 PDF objects out of 1200 (max. 8388607)
+ 210 named destinations out of 1000 (max. 500000)
  588 words of extra memory for PDF output out of 10000 (max. 10000000)
 

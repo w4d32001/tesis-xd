@@ -104,14 +104,14 @@ a todas las demás. Formalmente, la atención escalada de producto punto se defi
 \begin{equation}
     \text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
 \end{equation}
+\noindent donde
 
-donde $Q$, $K$ y $V$ representan las matrices de \textit{queries}, \textit{keys} y 
-\textit{values} proyectadas, y $d_k$ es la dimensión de las \textit{keys}, cuya raíz 
-cuadrada actúa como factor de escala para estabilizar los gradientes 
-\parencite{Vaswani2017}. La extensión multi-cabeza (\textit{Multi-Head Attention}) 
-ejecuta múltiples operaciones de atención en paralelo sobre distintos subespacios de 
-representación, permitiendo al modelo capturar simultáneamente dependencias sintácticas, 
-semánticas y de largo alcance en el texto \parencite{Vaswani2017}.
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $Q, K, V$ & representan las matrices de \textit{queries}, \textit{keys} y \textit{values} proyectadas; \\
+  & $d_k$ & es la dimensión de las \textit{keys}, cuya raíz cuadrada actúa como factor de escala para estabilizar los gradientes \parencite{Vaswani2017}.
+\end{tabular}
+
+La extensión multi-cabeza (\textit{Multi-Head Attention}) ejecuta múltiples operaciones de atención en paralelo sobre distintos subespacios de representación, permitiendo al modelo capturar simultáneamente dependencias sintácticas, semánticas y de largo alcance en el texto \parencite{Vaswani2017}.
 
 \begin{figure}[H]
     \centering
