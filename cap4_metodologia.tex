@@ -15,32 +15,33 @@ Para abordar la complejidad del ecosistema SynapTome, el diseño metodológico s
   \item Diseño de Evaluación (Validación): Se utiliza un diseño de tipo pre-test / post-test con un grupo cuasi-experimental. Se mide el desempeño académico (retención de conocimientos) de los estudiantes antes de la adopción del ecosistema SynapTome y, tras un periodo de uso continuo de la herramienta, se aplica un post-test para evaluar el impacto real generado por la plataforma interactiva y colaborativa en la retención del conocimiento y en el fortalecimiento del aprendizaje colaborativo entre pares.
 \end{itemize}
 
-\subsection{Pipeline del sistema}
-Para operativizar el primer objetivo específico y transformar el flujo analógico de los estudiantes en un entorno digital de alta fidelidad, se diseñó un pipeline de procesamiento asíncrono desacoplado. La justificación de esta estructura lógica radica en la necesidad de mitigar la fatiga y el error humano derivado de la transcripción manual de fórmulas matemáticas bidimensionales complejas (como integrales múltiples, matrices o sistemas diferenciales). 
-
-El pipeline actúa directamente sobre la variable dependiente (eficiencia de captura), procesando los apuntes manuscritos mediante tres etapas críticas: normalización de la imagen, inferencia autorregresiva basada en el modelo Transformer TrOCR con \textit{fine-tuning}, y un post-procesamiento de sanitización semántica que traduce los mapas de características visuales en sintaxis \LaTeX{} válida y estandarizada. Este flujo asegura que el material resultante disponible para el autoestudio del alumno esté completamente libre de distorsiones algebraicas que alteren el significado científico original del cuaderno de clase.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{pipeline.png}
-    \caption{Descripción clara del contenido de la imagen enfocada en el impacto o flujo del estudiante.}
-    \label{fig:mi_diagrama_clave}
-\end{figure}
-
 \subsection{Descripción ética de la investigación}
 
 El desarrollo y despliegue del ecosistema SynapTome se adhiere a estrictos estándares de ética y privacidad de la información \parencite{Kreijkes2026, Dano2026}. Antes de iniciar las pruebas, se obtiene un consentimiento informado por escrito de los estudiantes de la UNAMBA, garantizando que su participación sea voluntaria y que tengan el derecho de retirarse del estudio en cualquier momento.\\
 A nivel técnico, el tratamiento de los datos personales y el contenido de los apuntes manuscritos subidos por los usuarios se gestiona con políticas de seguridad de grado industrial. Para asegurar la protección de los datos en tránsito y en reposo, la arquitectura implementa autenticación segura mediante tokens JWT (JSON Web Tokens) en los endpoints de la API, mientras que toda la información persistente, incluidas las métricas de evaluación y los grafos relacionales, es resguardada en una base de datos PostgreSQL aplicando el encriptado adecuado, evitando el acceso no autorizado y manteniendo la confidencialidad de la información académica y personal \parencite{Upadhyay2026}.
 
-\subsection{Población y muestra}
-
-\begin{itemize}
-  \item Población: La población objetivo está constituida por los estudiantes matriculados en la Escuela Académico Profesional de Ingeniería de Sistemas de la Universidad Nacional Micaela Bastidas de Apurímac (UNAMBA), durante el año académico en curso.
-  \item Se selecciona una muestra mediante un muestreo no probabilístico por conveniencia, basado en la disponibilidad, el nivel de interacción digital de los estudiantes y su inscripción en cursos de alta densidad matemática o teórica. Este tipo de muestreo facilita el reclutamiento para pruebas tecnológicas y de usabilidad en entornos controlados de laboratorio o aulas informáticas \parencite{Kreijkes2026}.
-\end{itemize}
 \subsection{Procedimiento}
 
-El procedimiento general de la investigación comprende cinco fases sistemáticas, desde el levantamiento de requisitos hasta la evaluación del sistema "SynapTome" en un entorno real con estudiantes de Ingeniería de Sistemas de la UNAMBA. La Tabla \ref{tab:procedimiento} resume las actividades, las herramientas tecnológicas empleadas y los entregables de cada fase.
+El procedimiento general de la investigación comprende cinco fases sistemáticas, desde el levantamiento de requisitos hasta la evaluación del sistema "SynapTome" en un entorno real con estudiantes de Ingeniería de Sistemas de la UNAMBA. 
+
+Como parte fundamental de la fase de integración tecnológica, se diseñó e implementó un pipeline de procesamiento asíncrono desacoplado para operativizar la transformación de los apuntes manuscritos analógicos a formato digital de alta fidelidad. Este flujo de trabajo actúa directamente sobre la eficiencia de captura de información y se detalla a continuación:
+\begin{enumerate}
+    \item \textbf{Preprocesamiento y normalización de imagen}: Se realiza la captura fotográfica del apunte manuscrito por parte del estudiante. La imagen es enviada al servidor donde se aplican filtros de binarización adaptativa de Sauvola, corrección de inclinación (\textit{deskewing}) y reducción de ruido gaussiano para optimizar el contraste de los trazos de tinta.
+    \item \textbf{Inferencia autorregresiva (TrOCR)}: La imagen normalizada segmentada en bloques de interés matemático se procesa mediante la arquitectura de aprendizaje profundo TrOCR. El codificador visual de tipo Vision Transformer (ViT) genera los mapas de características latentes que representan los trazos caligráficos. Posteriormente, el decodificador de lenguaje decodifica estos vectores en secuencias de caracteres que representan fórmulas en sintaxis \LaTeX{} válida y texto plano.
+    \item \textbf{Sanitización semántica y post-procesamiento}: Se aplica un analizador sintáctico (\textit{parser}) desarrollado para corregir errores comunes de balanceo de llaves, delimitadores matemáticos y etiquetas algebraicas, garantizando que el código de renderizado sea completamente válido y almacenable en PostgreSQL como un nodo estructurado.
+\end{enumerate}
+
+Este pipeline de IA se ilustra en la Figura \ref{fig:mi_diagrama_clave}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{pipeline.png}
+    \caption{Pipeline adaptativo de transcripción caligráfica manuscrita (HTR) e integración RAG/Grafo en el ecosistema SynapTome.}
+    \label{fig:mi_diagrama_clave}
+\end{figure}
+
+Las actividades específicas, tecnologías empleadas y entregables documentados para cada una de las fases de la investigación se detallan en la Tabla \ref{tab:procedimiento}.
+
 \begin{table}[H]
 \centering
 \caption{Fases del procedimiento de investigación}
@@ -81,6 +82,40 @@ El procedimiento general de la investigación comprende cinco fases sistemática
 \draw[line width=3.5pt] (tabla.north west) rectangle (tabla.south east);
 \end{tikzpicture}
 \end{table}
+
+\subsection{Población y muestra}
+
+\subsubsection{Población}
+La población objetivo de la presente investigación está conformada por los estudiantes matriculados en la Escuela Profesional de Ingeniería de Informática y Sistemas de la Universidad Nacional Micaela Bastidas de Apurímac (UNAMBA), quienes cursan asignaturas de alta carga cognitiva y densidad matemática en el semestre académico correspondiente. La población censal estimada para las asignaturas de ciencias básicas y especializadas (tales como Cálculo, Álgebra Lineal y Física) es de aproximadamente $N = 120$ alumnos distribuidos en diferentes ciclos académicos.
+
+\subsubsection{Muestra}
+Para determinar el tamaño representativo de la muestra bajo condiciones de población finita, se empleó la fórmula estándar de muestreo aleatorio simple para estimar proporciones en poblaciones conocidas:
+
+\begin{equation}
+n = \frac{N \cdot Z^2 \cdot p \cdot q}{d^2 \cdot (N - 1) + Z^2 \cdot p \cdot q}
+\end{equation}
+\noindent donde
+
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $n$ & es el tamaño de la muestra requerida; \\
+  & $N$ & es el tamaño de la población conocida ($N = 120$); \\
+  & $Z$ & es el nivel de confianza estándar ($Z = 1.96$ para un nivel de confianza del $95\%$); \\
+  & $p$ & es la probabilidad esperada de éxito ($p = 0.50$, asumiendo máxima heterogeneidad); \\
+  & $q$ & es la probabilidad de fracaso ($q = 1 - p = 0.50$); \\
+  & $d$ & es la precisión o margen de error admisible ($d = 0.05$).
+\end{tabular}
+
+Reemplazando los valores en la ecuación:
+\begin{equation}
+n = \frac{120 \cdot (1.96)^2 \cdot 0.50 \cdot 0.50}{(0.05)^2 \cdot (120 - 1) + (1.96)^2 \cdot 0.50 \cdot 0.50} \approx 92
+\end{equation}
+\noindent donde
+
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $n$ & es el resultado del cálculo que define la muestra representativa mínima.
+\end{tabular}
+
+Dado el carácter tecnológico y la factibilidad del estudio en laboratorios de cómputo, se seleccionó una muestra no probabilística por conveniencia de 30 estudiantes que cumplían con los criterios de inclusión: estar matriculados regularmente, tener disponibilidad horaria para interactuar con la plataforma SynapTome y estar cursando asignaturas técnicas simultáneamente \parencite{Kreijkes2026}.
 
 \subsection{Técnicas e instrumentos}
 
@@ -140,54 +175,140 @@ Evaluación Pre-test / Post-test de retención & Rendimiento académico e increm
 
 \subsection{Estadístico de la investigación}
 
-Para evaluar el desempeño del pipeline de visión por computadora TrOCR en la digitalización de apuntes manuscritos, se calculan cuantitativamente la Tasa de Error de Caracteres (CER) y la Tasa de Error de Palabras (WER), garantizando así que la transcripción a \LaTeX{} sea altamente precisa \parencite{AlHitawi2026}. Ambas métricas se basan en la distancia de edición de Levenshtein y se calculan como:
+La contrastación de las hipótesis y la validación de la eficacia técnica del sistema SynapTome requieren un marco estadístico formal estructurado en función de los datos recolectados.
 
+\subsubsection{Datos}
+Los datos experimentales recolectados constan de variables cuantitativas continuas distribuidas en:
+\begin{itemize}
+    \item Calificaciones obtenidas por los estudiantes en las evaluaciones de retención conceptual (escala vigesimal de 0 a 20) antes (pre-test) y después (post-test) de interactuar con el ecosistema.
+    \item Tiempos semanales de transcripción y consolidación de apuntes (minutos).
+    \item Índices porcentuales de error de caracteres (CER) y palabras (WER).
+    \item Puntajes ordinales de carga mental subjetiva de trabajo (NASA-TLX) y usabilidad del sistema (SUS).
+\end{itemize}
+
+\subsubsection{Estadístico}
+Se justifica el uso de la prueba paramétrica \textbf{T de Student para muestras relacionadas (pares)}, dado que se evalúa el rendimiento del mismo grupo de estudiantes (diseño de pre-test / post-test) antes y después de aplicar el estímulo (el uso de la plataforma SynapTome). Esta prueba asume que las diferencias entre los pares siguen una distribución aproximadamente normal.
+
+\subsubsection{Fórmulas}
+Todas las ecuaciones matemáticas empleadas en el análisis de datos se definen formalmente a continuación:
+
+\paragraph{Tasa de Error de Caracteres (CER):}
+Mide la precisión del reconocimiento caligráfico mediante la distancia de edición de Levenshtein:
 \begin{equation}
 \text{CER} = \frac{S + D + I}{N}
-\label{eq:cer}
 \end{equation}
+\noindent donde
 
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $S$ & es el número de sustituciones de caracteres requeridas; \\
+  & $D$ & es el número de eliminaciones de caracteres requeridas; \\
+  & $I$ & es el número de inserciones de caracteres requeridas; \\
+  & $N$ & es el número total de caracteres en la cadena de referencia.
+\end{tabular}
+
+\paragraph{Tasa de Error de Palabras (WER):}
 \begin{equation}
 \text{WER} = \frac{S_w + D_w + I_w}{N_w}
-\label{eq:wer}
 \end{equation}
+\noindent donde
 
-donde $S$, $D$ e $I$ representan el número de sustituciones, eliminaciones e inserciones de caracteres (o $S_w$, $D_w$, $I_w$ a nivel de palabras) necesarias para transformar el texto reconocido en el texto de referencia, y $N$ ($N_w$) es el número total de caracteres (palabras) en el texto de referencia. Valores cercanos a 0 indican una transcripción casi perfecta.
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $S_w$ & es el número de sustituciones de palabras requeridas; \\
+  & $D_w$ & es el número de eliminaciones de palabras requeridas; \\
+  & $I_w$ & es el número de inserciones de palabras requeridas; \\
+  & $N_w$ & es el número total de palabras en la cadena de referencia.
+\end{tabular}
 
-Para evaluar la calidad, coherencia y fidelidad semántica de los resúmenes abstractivos y la mitigación de alucinaciones del motor RAG, se emplean métricas estándar de procesamiento de lenguaje natural como ROUGE-N y BLEU, complementadas opcionalmente con BERTScore \parencite{Saxena2025, Ning2025}. La métrica ROUGE-N se define como:
-
+\paragraph{Métrica de Superposición ROUGE-N:}
+Evalúa la coincidencia exacta de n-gramas en la síntesis conceptual:
 \begin{equation}
 \text{ROUGE-N} = \frac{\sum_{S \in \{\text{Referencias}\}} \sum_{\text{gram}_n \in S} \text{Count}_{\text{match}}(\text{gram}_n)}{\sum_{S \in \{\text{Referencias}\}} \sum_{\text{gram}_n \in S} \text{Count}(\text{gram}_n)}
-\label{eq:rouge}
 \end{equation}
+\noindent donde
 
-es decir, la proporción de $n$-gramas del resumen de referencia que también aparecen en el resumen generado por el sistema.
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $\text{Count}_{\text{match}}$ & es el número de n-gramas coincidentes entre el resumen del sistema y la referencia; \\
+  & $\text{Count}$ & es el número total de n-gramas en la referencia.
+\end{tabular}
 
-Para la evaluación de la aceptación tecnológica (Tabla \ref{tab:instrumentos}), los puntajes obtenidos en los cuestionarios SUS se calculan siguiendo la fórmula estándar:
-
+\paragraph{Fórmula de Usabilidad del Sistema (SUS):}
 \begin{equation}
 \text{SUS} = 2.5 \times \sum_{i=1}^{10} x_i'
-\label{eq:sus}
 \end{equation}
+\noindent donde
 
-donde $x_i'$ corresponde a la puntuación ajustada de cada uno de los 10 ítems (restando 1 a los ítems impares y restando el valor original a 5 en los ítems pares), de modo que el puntaje final se normaliza en una escala de 0 a 100.
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $x_i'$ & es la puntuación corregida para el ítem $i$, restando 1 si es impar o restando a 5 si es par.
+\end{tabular}
 
-Finalmente, dado que el diseño de evaluación implica medir el rendimiento académico de un mismo grupo de estudiantes en dos momentos distintos (pre-test y post-test), la comprobación de la hipótesis principal se realiza utilizando la prueba paramétrica T de Student para muestras relacionadas (pares), asumiendo la normalidad en la distribución de los datos de desempeño:
-
-\begin{equation}
-t = \frac{\bar{d}}{s_d / \sqrt{n}}
-\label{eq:tstudent}
-\end{equation}
-
-donde $\bar{d}$ es la media de las diferencias entre las puntuaciones del post-test y el pre-test de cada estudiante, $s_d$ es la desviación estándar de esas diferencias, y $n$ es el tamaño de la muestra. En el caso de que la distribución de las puntuaciones de retención (por ejemplo, resultados de \textit{free recall} o quizzes integrados) no se ajuste a la normalidad, se emplea la prueba no paramétrica de Wilcoxon para muestras relacionadas como alternativa equivalente \parencite{Kreijkes2026}.
-
-Adicionalmente, para cuantificar la magnitud práctica del efecto observado (más allá de su significancia estadística), se calcula el tamaño del efecto mediante la $d$ de Cohen para muestras relacionadas:
-
+\paragraph{Magnitud del Efecto (d de Cohen):}
 \begin{equation}
 d = \frac{\bar{d}}{s_d}
-\label{eq:cohend}
+\end{equation}
+\noindent donde
+
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $\bar{d}$ & es la media de las diferencias individuales pre/post; \\
+  & $s_d$ & es la desviación estándar muestral de las diferencias observadas.
+\end{tabular}
+
+\subsubsection{Nivel de significancia}
+El nivel de significancia se fija en $\alpha = 0.05$ (nivel de confianza del $95\%$). Este valor determina la probabilidad máxima de rechazar erróneamente la hipótesis nula.
+
+\subsubsection{Estadístico de prueba}
+La hipótesis de investigación establece que la implementación de SynapTome incrementa significativamente el rendimiento académico de los estudiantes frente al método convencional. Por ende, la prueba de hipótesis es unilateral derecha:
+\begin{equation}
+H_0: \mu_{\text{post}} \leq \mu_{\text{pre}} \quad \text{vs} \quad H_1: \mu_{\text{post}} > \mu_{\text{pre}}
 \end{equation}
 
-interpretando los valores según las convenciones habituales ($d \approx 0.2$ efecto pequeño, $d \approx 0.5$ efecto moderado, $d \geq 0.8$ efecto grande), de manera consistente con los tamaños de efecto reportados en estudios similares \parencite{Kreijkes2026}.
+El estadístico de prueba $t$ calculado se define como:
+\begin{equation}
+t = \frac{\bar{d}}{s_d / \sqrt{n}}
+\end{equation}
+\noindent donde
 
-En todos los casos se aplica un nivel de significancia de $\alpha = 0.05$ ($p < 0.05$) para confirmar estadísticamente si las mejoras obtenidas en la retención del conocimiento mediante la plataforma SynapTome son significativas frente al modelo tradicional de toma de apuntes.
+\noindent\begin{tabular}{@{} p{1cm} l p{8.0cm} @{}}
+  & $t$ & es el valor del estadístico de prueba calculado; \\
+  & $\bar{d}$ & es el promedio muestral de las diferencias observadas; \\
+  & $s_d$ & es la desviación estándar muestral de las diferencias; \\
+  & $n$ & es el tamaño total de la muestra analizada.
+\end{tabular}
+
+\subsubsection{Región crítica}
+Para un nivel de significancia de $\alpha = 0.05$ y grados de libertad $gl = n - 1 = 2$ (bajo métricas de validación general), se define el valor límite $t_{\text{crítico}} = 2.92$. La región de rechazo de la hipótesis nula se encuentra en la cola derecha de la distribución.
+
+La Figura \ref{fig:region_critica_teorica} ilustra la representación gráfica de la región crítica teórica para una prueba unilateral derecha:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis} [
+    width=0.85\textwidth,
+    height=6cm,
+    xmin=-4, xmax=5,
+    ymin=0, ymax=0.45,
+    axis lines=left,
+    ticks=none,
+    xlabel={$t$},
+    ylabel={$f(t)$},
+    every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+    every axis y label/.style={at={(current axis.above origin)},anchor=south east}
+]
+\addplot [smooth, domain=-4:5, line width=1.5pt] {1/(sqrt(2*pi))*exp(-x^2/2)};
+\addplot [fill=red!30, draw=none, domain=2.92:5] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
+\draw [dashed, line width=1pt, color=black] (axis cs:2.92,0) -- (axis cs:2.92,0.4);
+\node[anchor=south] at (axis cs:2.92,0.4) {\footnotesize $t_{\text{crítico}} = 2.92$};
+\node at (axis cs:-1.5,0.15) {\footnotesize Región de Aceptación ($1 - \alpha$)};
+\node at (axis cs:4,0.05) {\footnotesize \textbf{Región de Rechazo ($\alpha$)}};
+\end{axis}
+\end{tikzpicture}
+\caption{Representación gráfica de la curva de densidad t de Student unilateral derecha y la región crítica de rechazo.}
+\label{fig:region_critica_teorica}
+\end{figure}
+
+\subsubsection{Interpretación}
+El criterio de decisión estadística consiste en comparar el estadístico calculado $t_{\text{calculado}}$ frente al valor de umbral $t_{\text{crítico}}$:
+\begin{itemize}
+    \item Si $t_{\text{calculado}} > 2.92$, el estadístico muestral cae dentro de la región de rechazo, por lo que se rechaza la hipótesis nula $H_0$ en favor de la hipótesis alternativa $H_1$, concluyendo que el uso de SynapTome incrementa el rendimiento académico y disminuye la carga cognitiva de forma de manera estadísticamente significativa.
+    \item Si $t_{\text{calculado}} \leq 2.92$, no existe evidencia estadística suficiente para rechazar $H_0$.
+\end{itemize}

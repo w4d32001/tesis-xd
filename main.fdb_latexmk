@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1782864837.92776 "main.bcf" "main.bbl" "main" 1782864997.68973 0
+["biber main"] 1782865574.08884 "main.bcf" "main.bbl" "main" 1782865924.52888 0
   "OLD_BIBLIO.bib" 1781918015 24603 3f9c6a169f0773fc00cefa6a6f3f405e ""
-  "main.bcf" 1782864996 118045 73f9b8e1201f2eb387f6c2a9e01c7c2e "pdflatex"
+  "main.bcf" 1782865923 117706 fb2bc0f379a883c195a422869624d172 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782864985.54841 "c:/Users/r2d2/Downloads/Nueva carpeta (15)/main.tex" "main.pdf" "main" 1782864997.69132 0
+["pdflatex"] 1782865910.67125 "c:/Users/r2d2/Downloads/Nueva carpeta (15)/main.tex" "main.pdf" "main" 1782865924.53419 0
   "ANEXOS.tex" 1782329724 8417 377b41150091629f3e450b67321273c4 ""
   "C:/Users/r2d2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1782776439 164858 1926c8d7bd1823f0c8393a5c0272d2d9 ""
   "C:/Users/r2d2/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1780271334 13333003 0fa45f3559f4575ed08ced66d5c4703f ""
@@ -357,19 +357,19 @@
   "cap05_ad_proyecto.tex" 1781283584 9983 b620b3c02aa77388968160e5db111497 ""
   "cap2_objetivos_hipotesis.tex" 1782776057 8347 59510314c855cae8301facf012129701 ""
   "cap3_marcoT.tex" 1782864972 42257 b241c88ed0d0a7858e76dbf0c56dd6e0 ""
-  "cap4_metodologia.tex" 1782864695 16207 e73a09b82e8a7452f2dfa7d8c44ed7fc ""
+  "cap4_metodologia.tex" 1782865896 21498 f791ed39361d8e6658a405138b04a8b5 ""
   "caratula.tex" 1782312489 1098 1a5a7889135e59814c4087dbbf1e90e5 ""
   "datos_generales.tex" 1782774762 1247 835d7c9095a12dbf99671c54478a770e ""
   "image/unamba.png" 1782274525 701852 3746f2a81fdd2c62a638fe66cd9fe00f ""
   "introduccion.tex" 1782273751 5704 e78240655523e866fcdacbbfcc299f58 ""
-  "main.aux" 1782864996 28898 c30dcbd6e997212ed4eed2378a8e4dd1 "pdflatex"
-  "main.bbl" 1782864842 83848 cb9adb03458b4e4905e2f34be7a9c2d6 "biber main"
-  "main.lof" 1782864996 3777 d4cc70a7b8484e06ac7e1572dda2e10b "pdflatex"
-  "main.lot" 1782864996 3309 2dc75694e145d262c391b06433a8478d "pdflatex"
-  "main.out" 1782864996 12097 d3fec9250a1aa040768fb062f612a599 "pdflatex"
-  "main.run.xml" 1782864996 2457 8664f181ad873c967e43245fda2bbd77 "pdflatex"
+  "main.aux" 1782865922 30282 15de87b2df44c63603f9483f7c5cdbf2 "pdflatex"
+  "main.bbl" 1782865676 83848 cb9adb03458b4e4905e2f34be7a9c2d6 "biber main"
+  "main.lof" 1782865923 4000 1b4abc41a994adc60fe7429a8325eed2 "pdflatex"
+  "main.lot" 1782865923 3309 fb2675fdd5a52ee69783a6ad66246cce "pdflatex"
+  "main.out" 1782865923 13173 c0c3dd01ce982104cd67f82920350f54 "pdflatex"
+  "main.run.xml" 1782865923 2457 8664f181ad873c967e43245fda2bbd77 "pdflatex"
   "main.tex" 1782864281 14295 18fe6106672b574006c572ed66a6ca1a ""
-  "main.toc" 1782864996 8332 945861ffc76d626374a2419d8bf141e1 "pdflatex"
+  "main.toc" 1782865923 9610 5e2f70180b4ccbdfd5e1db219a556277 "pdflatex"
   "pipeline.png" 1779413136 1608483 f700cc4a4400f77af3ce83fa4ce25898 ""
   (generated)
   "main.aux"

@@ -47,20 +47,33 @@
 \contentsline {section}{\textbf {METODOLOGÍA}}{28}{Item.29}%
 \contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{28}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{28}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Pipeline del sistema}{29}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Descripción ética de la investigación}{29}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Población y muestra}{30}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Procedimiento}{30}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Técnicas e instrumentos}{31}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Técnicas}{31}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Instrumentos}{32}{subsubsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.8}Estadístico de la investigación}{32}{subsection.4.8}%
-\contentsline {section}{\textbf {CAPÍTULO V}}{34}{equation.4.7}%
-\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{34}{equation.4.7}%
-\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{34}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Presupuesto}{37}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{37}{subsection.5.3}%
-\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{39}{subsection.5.3}%
+\contentsline {subsection}{\numberline {4.3}Descripción ética de la investigación}{29}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Procedimiento}{29}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Población y muestra}{31}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Población}{31}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Muestra}{31}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Técnicas e instrumentos}{32}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Técnicas}{32}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Instrumentos}{33}{subsubsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.7}Estadístico de la investigación}{33}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Datos}{33}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Estadístico}{33}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}Fórmulas}{34}{subsubsection.4.7.3}%
+\contentsline {paragraph}{\numberline {4.7.3.1}Tasa de Error de Caracteres (CER):}{34}{paragraph.4.7.3.1}%
+\contentsline {paragraph}{\numberline {4.7.3.2}Tasa de Error de Palabras (WER):}{34}{paragraph.4.7.3.2}%
+\contentsline {paragraph}{\numberline {4.7.3.3}Métrica de Superposición ROUGE-N:}{35}{paragraph.4.7.3.3}%
+\contentsline {paragraph}{\numberline {4.7.3.4}Fórmula de Usabilidad del Sistema (SUS):}{35}{paragraph.4.7.3.4}%
+\contentsline {paragraph}{\numberline {4.7.3.5}Magnitud del Efecto (d de Cohen):}{35}{paragraph.4.7.3.5}%
+\contentsline {subsubsection}{\numberline {4.7.4}Nivel de significancia}{35}{subsubsection.4.7.4}%
+\contentsline {subsubsection}{\numberline {4.7.5}Estadístico de prueba}{35}{subsubsection.4.7.5}%
+\contentsline {subsubsection}{\numberline {4.7.6}Región crítica}{36}{subsubsection.4.7.6}%
+\contentsline {subsubsection}{\numberline {4.7.7}Interpretación}{36}{subsubsection.4.7.7}%
+\contentsline {section}{\textbf {CAPÍTULO V}}{38}{subsubsection.4.7.7}%
+\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{38}{subsubsection.4.7.7}%
+\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{38}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Presupuesto}{41}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{41}{subsection.5.3}%
+\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{43}{subsection.5.3}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -139,4 +152,4 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\textbf {ANEXOS}}{44}{subsection.5.3}%
+\contentsline {section}{\textbf {ANEXOS}}{48}{subsection.5.3}%
