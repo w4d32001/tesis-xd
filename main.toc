@@ -2,17 +2,17 @@
 \flushright {\fontsize {12pt}{12pt}\selectfont Pag.}\@@@par 
 \contentsline {section}{\textbf {INTRODUCCIÓN}}{1}{Doc-Start}%
 \contentsline {section}{\textbf {DATOS GENERALES}}{3}{Doc-Start}%
-\contentsline {subsection}{\numberline {\textbf {a)}}\textbf {Título del proyecto:}}{3}{section*.1}%
-\contentsline {subsection}{\numberline {\textbf {b)}}\textbf {Ejecutor/ejecutores:}}{3}{section*.1}%
-\contentsline {subsection}{\numberline {\textbf {c)}}\textbf {Coasesor (si hubiese):}}{3}{section*.1}%
-\contentsline {subsection}{\numberline {\textbf {d)}}\textbf {Línea de investigación:}}{3}{section*.1}%
+\contentsline {subsection}{\numberline {\textbf {a)}}\textbf {Título del proyecto}}{3}{section*.1}%
+\contentsline {subsection}{\numberline {\textbf {b)}}\textbf {Ejecutor/ejecutores}}{3}{section*.1}%
+\contentsline {subsection}{\numberline {\textbf {c)}}\textbf {Asesor}}{3}{section*.1}%
+\contentsline {subsection}{\numberline {\textbf {d)}}\textbf {Línea de investigación}}{3}{section*.1}%
 \contentsline {section}{\textbf {CAPÍTULO I }}{4}{Item.4}%
 \contentsline {section}{\textbf {PLANTEAMIENTO DEL PROBLEMA}}{4}{Item.4}%
 \contentsline {subsection}{\numberline {1.1}Descripción del problema}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Enunciado del problema}{5}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Problema general}{5}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Problemas específicos}{5}{subsubsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.3}Justificación de la investigación}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.3}Justificación de la investigación}{5}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}Justificación Científica}{6}{subsubsection.1.3.1}%
 \contentsline {subsubsection}{\numberline {1.3.2}Justificación Tecnológica}{6}{subsubsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.3}Justificación Institucional}{7}{subsubsection.1.3.3}%
@@ -24,56 +24,56 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Objetivos específicos}{9}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Hipótesis de la investigación}{9}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Hipótesis general}{9}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Hipótesis específicas}{10}{subsubsection.2.2.2}%
-\contentsline {section}{\textbf {CAPÍTULO III}}{12}{table.caption.3}%
-\contentsline {section}{\textbf {MARCO TEÓRICO REFERENCIAL}}{12}{table.caption.3}%
-\contentsline {subsection}{\numberline {3.1}Antecedentes}{12}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Antecedentes internacionales}{12}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Antecedentes nacionales}{14}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Marco teórico}{14}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Inteligencia Artificial Generativa y Arquitectura RAG}{14}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Arquitectura Transformer y Mecanismo de Atención}{15}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Reconocimiento de Texto Manuscrito (HTR), TrOCR y Fórmulas Matemáticas}{17}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}\textit {Vector Embeddings} y Bases de Datos Vectoriales}{18}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Grafos de Conocimiento}{19}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Generación Automática de Evaluaciones Adaptativas}{20}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Aprendizaje Activo y Recuperación Espaciada (\textit {Spaced Repetition})}{20}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}Aprendizaje Colaborativo Mediado por Tecnología}{21}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}Carga Cognitiva y Medición con NASA-TLX}{22}{subsubsection.3.2.9}%
-\contentsline {subsubsection}{\numberline {3.2.10}Privacidad y Seguridad de Datos Estudiantiles en Plataformas IA}{22}{subsubsection.3.2.10}%
-\contentsline {subsubsection}{\numberline {3.2.11}Arquitectura Limpia (\textit {Clean Architecture})}{23}{subsubsection.3.2.11}%
-\contentsline {subsection}{\numberline {3.3}Marco conceptual}{24}{subsection.3.3}%
-\contentsline {section}{\textbf {CAPÍTULO IV}}{28}{Item.29}%
-\contentsline {section}{\textbf {METODOLOGÍA}}{28}{Item.29}%
-\contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{28}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{28}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Descripción ética de la investigación}{29}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Procedimiento}{29}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Población y muestra}{31}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Población}{31}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Muestra}{31}{subsubsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.6}Técnicas e instrumentos}{32}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Técnicas}{32}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Instrumentos}{33}{subsubsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.7}Estadístico de la investigación}{33}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Datos}{33}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Estadístico}{33}{subsubsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.3}Fórmulas}{34}{subsubsection.4.7.3}%
-\contentsline {paragraph}{\numberline {4.7.3.1}Tasa de Error de Caracteres (CER):}{34}{paragraph.4.7.3.1}%
-\contentsline {paragraph}{\numberline {4.7.3.2}Tasa de Error de Palabras (WER):}{34}{paragraph.4.7.3.2}%
-\contentsline {paragraph}{\numberline {4.7.3.3}Métrica de Superposición ROUGE-N:}{35}{paragraph.4.7.3.3}%
-\contentsline {paragraph}{\numberline {4.7.3.4}Fórmula de Usabilidad del Sistema (SUS):}{35}{paragraph.4.7.3.4}%
-\contentsline {paragraph}{\numberline {4.7.3.5}Magnitud del Efecto (d de Cohen):}{35}{paragraph.4.7.3.5}%
-\contentsline {subsubsection}{\numberline {4.7.4}Nivel de significancia}{35}{subsubsection.4.7.4}%
-\contentsline {subsubsection}{\numberline {4.7.5}Estadístico de prueba}{35}{subsubsection.4.7.5}%
-\contentsline {subsubsection}{\numberline {4.7.6}Región crítica}{36}{subsubsection.4.7.6}%
-\contentsline {subsubsection}{\numberline {4.7.7}Interpretación}{36}{subsubsection.4.7.7}%
-\contentsline {section}{\textbf {CAPÍTULO V}}{38}{subsubsection.4.7.7}%
-\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{38}{subsubsection.4.7.7}%
-\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{38}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Presupuesto}{41}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{41}{subsection.5.3}%
-\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{43}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {2.2.2}Hipótesis específicas}{9}{subsubsection.2.2.2}%
+\contentsline {section}{\textbf {CAPÍTULO III}}{13}{table.caption.4}%
+\contentsline {section}{\textbf {MARCO TEÓRICO REFERENCIAL}}{13}{table.caption.4}%
+\contentsline {subsection}{\numberline {3.1}Antecedentes}{13}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Antecedentes internacionales}{13}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Antecedentes nacionales}{15}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Marco teórico}{15}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Inteligencia Artificial Generativa y Arquitectura RAG}{15}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Arquitectura Transformer y Mecanismo de Atención}{16}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Reconocimiento de Texto Manuscrito (HTR), TrOCR y Fórmulas Matemáticas}{18}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}\textit {Vector Embeddings} y Bases de Datos Vectoriales}{19}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Grafos de Conocimiento}{20}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Generación Automática de Evaluaciones Adaptativas}{21}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Aprendizaje Activo y Recuperación Espaciada (\textit {Spaced Repetition})}{21}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Aprendizaje Colaborativo Mediado por Tecnología}{22}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Carga Cognitiva y Medición con NASA-TLX}{23}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}Privacidad y Seguridad de Datos Estudiantiles en Plataformas IA}{23}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Arquitectura Limpia (\textit {Clean Architecture})}{24}{subsubsection.3.2.11}%
+\contentsline {subsection}{\numberline {3.3}Marco conceptual}{25}{subsection.3.3}%
+\contentsline {section}{\textbf {CAPÍTULO IV}}{29}{Item.29}%
+\contentsline {section}{\textbf {METODOLOGÍA}}{29}{Item.29}%
+\contentsline {subsection}{\numberline {4.1}Tipo y nivel de investigación}{29}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diseño de la investigación}{29}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Descripción ética de la investigación}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Procedimiento}{30}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Población y muestra}{32}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Población}{32}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Muestra}{32}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Técnicas e instrumentos}{33}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Técnicas}{33}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Instrumentos}{34}{subsubsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.7}Estadístico de la investigación}{34}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Datos}{34}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Estadístico}{34}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}Fórmulas}{35}{subsubsection.4.7.3}%
+\contentsline {paragraph}{\numberline {4.7.3.1}Tasa de Error de Caracteres (CER):}{35}{paragraph.4.7.3.1}%
+\contentsline {paragraph}{\numberline {4.7.3.2}Tasa de Error de Palabras (WER):}{35}{paragraph.4.7.3.2}%
+\contentsline {paragraph}{\numberline {4.7.3.3}Métrica de Superposición ROUGE-N:}{36}{paragraph.4.7.3.3}%
+\contentsline {paragraph}{\numberline {4.7.3.4}Fórmula de Usabilidad del Sistema (SUS):}{36}{paragraph.4.7.3.4}%
+\contentsline {paragraph}{\numberline {4.7.3.5}Magnitud del Efecto (d de Cohen):}{36}{paragraph.4.7.3.5}%
+\contentsline {subsubsection}{\numberline {4.7.4}Nivel de significancia}{36}{subsubsection.4.7.4}%
+\contentsline {subsubsection}{\numberline {4.7.5}Estadístico de prueba}{36}{subsubsection.4.7.5}%
+\contentsline {subsubsection}{\numberline {4.7.6}Región crítica}{37}{subsubsection.4.7.6}%
+\contentsline {subsubsection}{\numberline {4.7.7}Interpretación}{37}{subsubsection.4.7.7}%
+\contentsline {section}{\textbf {CAPÍTULO V}}{39}{subsubsection.4.7.7}%
+\contentsline {section}{\textbf {ADMINISTRACIÓN DEL PROYECTO}}{39}{subsubsection.4.7.7}%
+\contentsline {subsection}{\numberline {5.1}Cronograma de actividades}{39}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Presupuesto}{42}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Fuente de financiamiento}{42}{subsection.5.3}%
+\contentsline {section}{\textbf {REFERENCIAS BIBLIOGRÁFICAS}}{44}{subsection.5.3}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -152,4 +152,4 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\textbf {ANEXOS}}{48}{subsection.5.3}%
+\contentsline {section}{\textbf {ANEXOS}}{49}{subsection.5.3}%

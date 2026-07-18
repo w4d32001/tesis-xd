@@ -4,7 +4,7 @@
 
 \subsection{Tipo y nivel de investigación}
 
-La presente investigación se clasifica por su propósito como Tecnológica Aplicada, dado que busca resolver un problema práctico y concreto: la sobrecarga cognitiva y la desorganización de apuntes en el entorno universitario, mediante el desarrollo de una solución de software (SynapTome). Por su alcance y profundidad, el estudio corresponde a un nivel explicativo-experimental (específicamente, un diseño cuasi-experimental). Este nivel permite no solo describir el ecosistema desarrollado, sino también determinar las relaciones de causa y efecto que la Variable Independiente (el ecosistema basado en RAG, TrOCR y Grafos de Conocimiento) ejerce sobre la Variable Dependiente (la retención de conocimientos, el rendimiento académico y el aprendizaje colaborativo). Como señalan \textcite{Kreijkes2026}, el uso de diseños experimentales en entornos educativos es fundamental para cuantificar de manera objetiva los efectos de las herramientas basadas en LLMs sobre la comprensión lectora y la memoria de los estudiantes.
+La presente investigación se clasifica por su propósito como Tecnológica Aplicada, dado que busca resolver un problema práctico y concreto: la sobrecarga cognitiva y la desorganización de apuntes en el entorno universitario, mediante el desarrollo de una solución de software (SynapTome). Por su alcance y profundidad, el estudio corresponde a un nivel explicativo-experimental (específicamente, un diseño cuasi-experimental). Este nivel permite no solo describir el ecosistema desarrollado, sino también determinar las relaciones de causa y efecto que la Variable Independiente (el ecosistema basado en RAG, TrOCR y Grafos de Conocimiento) ejerce sobre la Variable Dependiente (la retención de conocimientos y el rendimiento académico). Como señalan \textcite{Kreijkes2026}, el uso de diseños experimentales en entornos educativos es fundamental para cuantificar de manera objetiva los efectos de las herramientas basadas en LLMs sobre la comprensión lectora y la memoria de los estudiantes.
 
 \subsection{Diseño de la investigación}
 
@@ -12,7 +12,7 @@ Para abordar la complejidad del ecosistema SynapTome, el diseño metodológico s
 
 \begin{itemize}
   \item Diseño de Ingeniería de Software: Se emplea la metodología ágil Scrum. Según \textcite{Afian2025}, las metodologías ágiles soportan el desarrollo iterativo, la retroalimentación continua y la adaptabilidad, características esenciales para el desarrollo de plataformas de tutoría impulsadas por inteligencia artificial. El desarrollo se estructura en sprints que abarcan la planificación, el diseño, la implementación del backend y los pipelines de IA, y las pruebas continuas de las funciones.
-  \item Diseño de Evaluación (Validación): Se utiliza un diseño de tipo pre-test / post-test con un grupo cuasi-experimental. Se mide el desempeño académico (retención de conocimientos) de los estudiantes antes de la adopción del ecosistema SynapTome y, tras un periodo de uso continuo de la herramienta, se aplica un post-test para evaluar el impacto real generado por la plataforma interactiva y colaborativa en la retención del conocimiento y en el fortalecimiento del aprendizaje colaborativo entre pares.
+  \item Diseño de Evaluación (Validación): Se utiliza un diseño de tipo pre-test / post-test con un grupo cuasi-experimental. Se mide el desempeño académico (retención de conocimientos) de los estudiantes antes de la adopción del ecosistema SynapTome y, tras un periodo de uso continuo de la herramienta, se aplica un post-test para evaluar el impacto real generado por la plataforma interactiva en la retención del conocimiento.
 \end{itemize}
 
 \subsection{Descripción ética de la investigación}
@@ -35,7 +35,10 @@ Este pipeline de IA se ilustra en la Figura \ref{fig:mi_diagrama_clave}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{pipeline.png}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (imagen) {\includegraphics[width=0.85\textwidth]{pipeline.png}};
+        \draw[line width=3.5pt] (imagen.north west) rectangle (imagen.south east);
+    \end{tikzpicture}
     \caption{Pipeline adaptativo de transcripción caligráfica manuscrita (HTR) e integración RAG/Grafo en el ecosistema SynapTome.}
     \label{fig:mi_diagrama_clave}
 \end{figure}
@@ -158,7 +161,7 @@ Ficha de evaluación de fidelidad conceptual & Calidad factual del repaso (reduc
 Cuestionario NASA-TLX (Carga Mental) & Sobrecarga cognitiva y fatiga mental del estudiante en su autoestudio & Escala ordinal de carga de trabajo (0--100 ptos) & \parencite{HartStaveland1988} \\
 \hline
 
-Cuestionario de usabilidad (SUS) y Ficha de monitoreo web & Eficiencia operativa y frecuencia del aprendizaje colaborativo en red & Puntuación normalizada SUS (0--100) e intercambio colaborativo (ítems/semana) & \parencite{Afian2025} \\
+Cuestionario de usabilidad (SUS) & Eficiencia operativa del sistema & Puntuación normalizada SUS (0--100) & \parencite{Afian2025} \\
 \hline
 
 Evaluación Pre-test / Post-test de retención & Rendimiento académico e incremento de la fijación conceptual a largo plazo & Calificación cuantitativa (Escala vigesimal 0--20) & \parencite{Kreijkes2026} \\
@@ -292,15 +295,33 @@ La Figura \ref{fig:region_critica_teorica} ilustra la representación gráfica d
     xlabel={$t$},
     ylabel={$f(t)$},
     every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
-    every axis y label/.style={at={(current axis.above origin)},anchor=south east}
+    every axis y label/.style={at={(current axis.above origin)},anchor=south east},
+    clip=false
 ]
-\addplot [smooth, domain=-4:5, line width=1.5pt] {1/(sqrt(2*pi))*exp(-x^2/2)};
-\addplot [fill=red!30, draw=none, domain=2.92:5] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
-\draw [dashed, line width=1pt, color=black] (axis cs:2.92,0) -- (axis cs:2.92,0.4);
-\node[anchor=south] at (axis cs:2.92,0.4) {\footnotesize $t_{\text{crítico}} = 2.92$};
-\node at (axis cs:-1.5,0.15) {\footnotesize Región de Aceptación ($1 - \alpha$)};
-\node at (axis cs:4,0.05) {\footnotesize \textbf{Región de Rechazo ($\alpha$)}};
+    % Area de Aceptación (1 - alpha)
+    \addplot [fill=blue!10, fill opacity=0.5, draw=none, domain=-4:2.92] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
+    
+    % Area de Rechazo (alpha)
+    \addplot [fill=red!30, fill opacity=0.6, draw=none, domain=2.92:5] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
+    
+    % Curva de densidad de probabilidad (t-Student / Normal)
+    \addplot [smooth, domain=-4:5, line width=2pt, color=blue!70!black] {1/(sqrt(2*pi))*exp(-x^2/2)};
+    
+    % Línea del valor crítico t_crítico = 2.92
+    \draw [dashed, line width=1.5pt, color=red!80!black] (axis cs:2.92,0) -- (axis cs:2.92,0.4);
+    \node[anchor=south, color=red!80!black] at (axis cs:2.92,0.4) {\footnotesize $t_{\text{crítico}} = 2.92$};
+    
+    % Etiquetas descriptivas
+    \node[color=blue!70!black] at (axis cs:-1.0,0.15) {\footnotesize \textbf{Región de Aceptación}};
+    \node[color=blue!70!black] at (axis cs:-1.0,0.11) {\footnotesize ($1 - \alpha = 0.95$)};
+    
+    \node[color=red!80!black, align=center] at (axis cs:4.0,0.08) {\footnotesize \textbf{Región de}\\\footnotesize \textbf{Rechazo ($\alpha = 0.05$)}};
+    
+    % Flecha indicadora para el área de rechazo
+    \draw[<-] (axis cs:3.5,0.02) -- (axis cs:4.0,0.05);
+
 \end{axis}
+\draw[line width=3.5pt] ($(current bounding box.north west)+(-5pt,5pt)$) rectangle ($(current bounding box.south east)+(5pt,-5pt)$);
 \end{tikzpicture}
 \caption{Representación gráfica de la curva de densidad t de Student unilateral derecha y la región crítica de rechazo.}
 \label{fig:region_critica_teorica}

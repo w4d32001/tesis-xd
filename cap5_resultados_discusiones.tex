@@ -34,6 +34,7 @@ Para evaluar el incremento en la precisión de la digitalización de apuntes de 
         (3.80,{TrOCR (Física)})
     };
 \end{axis}
+\draw[line width=3.5pt] ($(current bounding box.north west)+(-5pt,5pt)$) rectangle ($(current bounding box.south east)+(5pt,-5pt)$);
 \end{tikzpicture}
 \caption{Comparación de la Tasa de Error de Caracteres (CER \%) en apuntes técnicos de estudiantes.}
 \label{fig:homogenizacion_registros}
@@ -69,6 +70,7 @@ En la Figura \ref{fig:homogenizacion_registros} se observa que la tasa de error 
     \addplot[fill=blue!70] coordinates {(Texto Plano,2.1) (Fórmulas Simples,3.5) (Matrices,5.2) (Ec. Diferenciales,6.8)};
     \legend{Antes (OCR Estándar), Después (SynapTome)}
 \end{axis}
+\draw[line width=3.5pt] ($(current bounding box.north west)+(-5pt,5pt)$) rectangle ($(current bounding box.south east)+(5pt,-5pt)$);
 \end{tikzpicture}
 \caption{Análisis de error (CER \%) por tipología de estructura matemática manuscrita.}
 \label{fig:sta_lta_scvm}
@@ -111,6 +113,7 @@ coordinates {(1,32.5)(2,29.4)(4,28.1)(6,30.2)(8,27.9)(10,29.1)};
 coordinates {(1,28.5)(2,14.2)(4,6.8)(6,3.1)(8,1.5)(10,0.4)};
 \legend{LLM Genérico, Middleware RAG SynapTome}
 \end{axis}
+\draw[line width=3.5pt] ($(current bounding box.north west)+(-5pt,5pt)$) rectangle ($(current bounding box.south east)+(5pt,-5pt)$);
 \end{tikzpicture}
 \caption{Evolución del índice de alucinaciones factuales según la inyección de contexto validado.}
 \label{fig:sta_lta_itej}
@@ -205,6 +208,7 @@ Los indicadores macro recolectados en la Tabla \ref{tab:tp_ts_detectados} revela
     coordinates {(1,96.5)(2,95.2)(4,94.1)(6,93.5)};
 \legend{Estudio Tradicional, Cuestionarios SynapTome}
 \end{axis}
+\draw[line width=3.5pt] ($(current bounding box.north west)+(-5pt,5pt)$) rectangle ($(current bounding box.south east)+(5pt,-5pt)$);
 \end{tikzpicture}
 \caption{Curva de retención cognitiva a largo plazo basada en evaluaciones formativas automatizadas.}
 \label{fig:accuracy_cnn}
@@ -218,7 +222,7 @@ Como complemento, la Figura \ref{fig:accuracy_cnn} ilustra la medición longitud
 
 \subsection{Contrastación de la hipótesis general}
 
-La presente hipótesis general tuvo como finalidad demostrar estadísticamente que la implementación del ecosistema inteligente SynapTome, mediante la orquestación de arquitecturas RAG, motores de transcripción visual TrOCR y Grafos de Conocimiento, mejora significativamente la retención del conocimiento, reduce la sobrecarga cognitiva y optimiza la eficacia del aprendizaje colaborativo en estudiantes universitarios, alcanzando un desempeño global medible superior al 80\% en la optimización de sus variables pedagógicas fundamentales.
+La presente hipótesis general tuvo como finalidad demostrar estadísticamente que la implementación del ecosistema inteligente SynapTome, mediante la orquestación de arquitecturas RAG, motores de transcripción visual TrOCR y Grafos de Conocimiento, mejora significativamente la retención del conocimiento, reduce la sobrecarga cognitiva y optimiza el rendimiento académico en estudiantes universitarios, alcanzando un desempeño global medible superior al 80\% en la optimización de sus variables pedagógicas fundamentales.
 
 \vspace{0.4cm}
 
@@ -227,7 +231,7 @@ La presente hipótesis general tuvo como finalidad demostrar estadísticamente q
 \[
 H_0:\ \mu \leq 0.80
 \]
-La implementación del ecosistema inteligente SynapTome y sus componentes de IA no permite optimizar el aprendizaje colaborativo, la reducción de sobrecarga y la retención del conocimiento estudiantil con un desempeño global superior al 80\%.
+La implementación del ecosistema inteligente SynapTome y sus componentes de IA no permite optimizar el rendimiento académico, la reducción de sobrecarga y la retención del conocimiento estudiantil con un desempeño global superior al 80\%.
 
 \vspace{0.3cm}
 
@@ -235,7 +239,7 @@ La implementación del ecosistema inteligente SynapTome y sus componentes de IA 
 \[
 H_1:\ \mu > 0.80
 \]
-La implementación del ecosistema inteligente SynapTome y sus componentes de IA permite optimizar de manera integral el aprendizaje colaborativo, la reducción de sobrecarga y la retención del conocimiento estudiantil con un desempeño global superior al 80\%.
+La implementación del ecosistema inteligente SynapTome y sus componentes de IA permite optimizar de manera integral el rendimiento académico, la reducción de sobrecarga y la retención del conocimiento estudiantil con un desempeño global superior al 80\%.
 
 \vspace{0.4cm}
 
@@ -393,17 +397,36 @@ Decisión estadística & Rechazar \(H_0\) \\
     xlabel={$t$},
     ylabel={$f(t)$},
     every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
-    every axis y label/.style={at={(current axis.above origin)},anchor=south east}
+    every axis y label/.style={at={(current axis.above origin)},anchor=south east},
+    clip=false
 ]
-\addplot [smooth, domain=-4:5, line width=1.5pt] {1/(sqrt(2*pi))*exp(-x^2/2)};
-\addplot [fill=red!30, draw=none, domain=2.92:5] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
-\draw [dashed, line width=1pt, color=black] (axis cs:2.92,0) -- (axis cs:2.92,0.4);
-\node[anchor=south] at (axis cs:2.92,0.4) {\footnotesize $t_{\text{crítico}} = 2.92$};
-\draw [line width=1.5pt, color=blue] (axis cs:3.21,0) -- (axis cs:3.21,0.25);
-\node[anchor=south, color=blue] at (axis cs:3.21,0.25) {\footnotesize $t_{\text{calculado}} = 3.21$};
-\node at (axis cs:-1.5,0.15) {\footnotesize Región de Aceptación};
-\node at (axis cs:4,0.05) {\footnotesize \textbf{Rechazo $H_0$}};
+    % Area de Aceptación (1 - alpha)
+    \addplot [fill=blue!10, fill opacity=0.5, draw=none, domain=-4:2.92] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
+    
+    % Area de Rechazo (alpha)
+    \addplot [fill=red!30, fill opacity=0.6, draw=none, domain=2.92:5] {1/(sqrt(2*pi))*exp(-x^2/2)} \closedcycle;
+    
+    % Curva de densidad de probabilidad (t-Student / Normal)
+    \addplot [smooth, domain=-4:5, line width=2pt, color=blue!70!black] {1/(sqrt(2*pi))*exp(-x^2/2)};
+    
+    % Línea del valor crítico t_crítico = 2.92
+    \draw [dashed, line width=1.5pt, color=red!80!black] (axis cs:2.92,0) -- (axis cs:2.92,0.4);
+    \node[anchor=south, color=red!80!black] at (axis cs:2.92,0.4) {\footnotesize $t_{\text{crítico}} = 2.92$};
+    
+    % Línea del valor calculado t_calculado = 3.21
+    \draw [solid, line width=1.5pt, color=teal!70!black] (axis cs:3.21,0) -- (axis cs:3.21,0.25);
+    \node[anchor=south, color=teal!70!black, align=center] at (axis cs:3.21,0.25) {\footnotesize $t_{\text{calculado}}$\\\footnotesize $= 3.21$};
+    
+    % Etiquetas descriptivas
+    \node[color=blue!70!black] at (axis cs:-1.0,0.15) {\footnotesize \textbf{Región de Aceptación}};
+    
+    \node[color=red!80!black, align=center] at (axis cs:4.1,0.08) {\footnotesize \textbf{Rechazo $H_0$}\\\footnotesize ($\alpha = 0.05$)};
+    
+    % Flecha indicadora para el área de rechazo
+    \draw[<-] (axis cs:3.7,0.02) -- (axis cs:4.1,0.05);
+
 \end{axis}
+\draw[line width=3.5pt] ($(current bounding box.north west)+(-5pt,5pt)$) rectangle ($(current bounding box.south east)+(5pt,-5pt)$);
 \end{tikzpicture}
 \caption{Región crítica de la prueba t de Student para la hipótesis de impacto pedagógico general.}
 \label{fig:region_critica_hip_general}
@@ -423,7 +446,7 @@ Los significativos incrementos en las calificaciones, la disminución neta del e
 \vspace{0.4cm}
 
 \subsubsection{Conclusión de la hipótesis general}
-Se rechaza la hipótesis nula (\(H_0\)) y se acepta la hipótesis alternativa (\(H_1\)), concluyendo con un nivel de confianza del 95\% que la implementación del ecosistema inteligente SynapTome, al orquestar arquitecturas de vanguardia basadas en RAG, TrOCR y Grafos de Conocimiento, optimiza significativamente la gestión del aprendizaje, la digitalización precisa y el rendimiento académico colaborativo de los estudiantes universitarios frente a las metodologías tradicionales y aisladas.
+Se rechaza la hipótesis nula (\(H_0\)) y se acepta la hipótesis alternativa (\(H_1\)), concluyendo con un nivel de confianza del 95\% que la implementación del ecosistema inteligente SynapTome, al orquestar arquitecturas de vanguardia basadas en RAG, TrOCR y Grafos de Conocimiento, optimiza significativamente la gestión del aprendizaje, la digitalización precisa y el rendimiento académico de los estudiantes universitarios frente a las metodologías tradicionales y aisladas.
 
 \vspace{0.4cm}
 
